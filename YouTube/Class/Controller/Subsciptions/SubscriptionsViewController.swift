@@ -14,7 +14,7 @@ class SubscriptionsViewController: BaseViewController {
     
     let menuTitles = ["hqdefault-1", "Whoner & losers", "What Does Jared Kushner Believe?", "hqdefault-2", "Cnn:the age channage", "hqdefault-6"]
     let logoImages = ["channel1", "channel2", "channel3", "channel4", "channel5", "channel5"]
-    let descs = ["Molly  date：2020-05-26 18:42", "Seeker  date：2020-05-26 17:01", "Molly  date：2020-05-26 18:42", "Molly  date：2020-05-26 18:42", "Molly  date：2020-05-26 18:42", "date：2020-05-26 18:42"]
+    let descs = ["Molly   2020-05-26 18:42", "Seeker   2020-05-26 17:01", "Molly   2020-05-26 18:42", "Molly   2020-05-26 18:42", "Molly   2020-05-26 18:42", " 2020-05-26 18:42"]
     let times = ["01:52", "03:08", "00:53", "02:15", "03:21", "04:28"]
     
     var tableview : UITableView?
@@ -70,8 +70,14 @@ extension SubscriptionsViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let data = VedioData()
+        data.vedioImgUrl = menuTitles[indexPath.row]
+        data.title = menuTitles[indexPath.row]
+        data.authLogo = logoImages[indexPath.row]
+        data.createTime = descs[indexPath.row]
+        
         let detail = VedioDetailController()
-        detail.vedioId = "125"
+        detail.vedioData = data
         self.navigationController?.pushViewController(detail, animated: true)
     }
 }

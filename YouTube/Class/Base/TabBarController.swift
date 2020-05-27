@@ -22,10 +22,10 @@ class TabBarController: UITabBarController {
         let v3 = SubscriptionsViewController()
         let v4 = AccountViewController()
         
-        v1.title = "首页"
-        v2.title = "时下流行"
-        v3.title = "媒体库"
-        v4.title = "我的"
+        v1.title = "Home"
+        v2.title = "Trending"
+        v3.title = "Vedios"
+        v4.title = "Account"
         
         let nav1 = NavigationController(rootViewController: v1)
         let nav2 = NavigationController(rootViewController: v2)
