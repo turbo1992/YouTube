@@ -26,6 +26,10 @@ class VedioCell: UITableViewCell {
         self.selectionStyle = UITableViewCell.SelectionStyle.none
         
         createCellUI()
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
         setupUIFrame()
     }
     

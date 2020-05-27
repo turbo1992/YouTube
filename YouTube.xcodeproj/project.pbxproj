@@ -80,6 +80,9 @@
 		B5CE80A6247E4038001F1205 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE8095247E4038001F1205 /* ResponseSerialization.swift */; };
 		B5CE80A7247E4038001F1205 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE8096247E4038001F1205 /* ServerTrustPolicy.swift */; };
 		B5CE80A8247E4038001F1205 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE8097247E4038001F1205 /* SessionDelegate.swift */; };
+		B5CE80AC247E61DE001F1205 /* VedioDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE80AB247E61DE001F1205 /* VedioDetailHeaderView.swift */; };
+		B5CE80AE247E63B3001F1205 /* VedioData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE80AD247E63B3001F1205 /* VedioData.swift */; };
+		B5CE80B0247E65ED001F1205 /* RecomandVedioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE80AF247E65ED001F1205 /* RecomandVedioCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -179,6 +182,9 @@
 		B5CE8095247E4038001F1205 /* ResponseSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseSerialization.swift; sourceTree = "<group>"; };
 		B5CE8096247E4038001F1205 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerTrustPolicy.swift; sourceTree = "<group>"; };
 		B5CE8097247E4038001F1205 /* SessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDelegate.swift; sourceTree = "<group>"; };
+		B5CE80AB247E61DE001F1205 /* VedioDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VedioDetailHeaderView.swift; sourceTree = "<group>"; };
+		B5CE80AD247E63B3001F1205 /* VedioData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VedioData.swift; sourceTree = "<group>"; };
+		B5CE80AF247E65ED001F1205 /* RecomandVedioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomandVedioCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -232,7 +238,6 @@
 				B53E1A3D2473BAAD004BBED2 /* AppDelegate.swift */,
 				B53E1A412473BAAD004BBED2 /* ViewController.swift */,
 				B53E1A6D2473BAE7004BBED2 /* Class */,
-				B53E1A792473BAE7004BBED2 /* Source */,
 				B53E1A432473BAAD004BBED2 /* Main.storyboard */,
 				B53E1A462473BAAF004BBED2 /* Assets.xcassets */,
 				B53E1A482473BAAF004BBED2 /* LaunchScreen.storyboard */,
@@ -265,19 +270,10 @@
 				B5CE7FFB247E3E40001F1205 /* ThirdParty */,
 				B53E1AC2247CF806004BBED2 /* Model */,
 				B53E1AA8247CB601004BBED2 /* Base */,
-				B53E1A6E2473BAE7004BBED2 /* Utils */,
 				B53E1A6F2473BAE7004BBED2 /* Controller */,
 				B53E1A742473BAE7004BBED2 /* Common */,
-				B53E1A782473BAE7004BBED2 /* Base */,
 			);
 			path = Class;
-			sourceTree = "<group>";
-		};
-		B53E1A6E2473BAE7004BBED2 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		B53E1A6F2473BAE7004BBED2 /* Controller */ = {
@@ -297,20 +293,6 @@
 				B53E1AAB247CBB35004BBED2 /* Common.swift */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		B53E1A782473BAE7004BBED2 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
-		B53E1A792473BAE7004BBED2 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Source;
 			sourceTree = "<group>";
 		};
 		B53E1AA8247CB601004BBED2 /* Base */ = {
@@ -373,6 +355,7 @@
 			isa = PBXGroup;
 			children = (
 				B53E1AC3247CF827004BBED2 /* AccountInfo.swift */,
+				B5CE80AD247E63B3001F1205 /* VedioData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -381,6 +364,8 @@
 			isa = PBXGroup;
 			children = (
 				B53E1AC8247D2450004BBED2 /* VedioCell.swift */,
+				B5CE80AB247E61DE001F1205 /* VedioDetailHeaderView.swift */,
+				B5CE80AF247E65ED001F1205 /* RecomandVedioCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -596,6 +581,7 @@
 				B5CE8085247E3E7F001F1205 /* ConstraintMakerRelatable.swift in Sources */,
 				B5CE8077247E3E7F001F1205 /* ConstraintConstantTarget.swift in Sources */,
 				B5CE806D247E3E7F001F1205 /* ConstraintDSL.swift in Sources */,
+				B5CE80B0247E65ED001F1205 /* RecomandVedioCell.swift in Sources */,
 				B5CE80A3247E4038001F1205 /* Alamofire.swift in Sources */,
 				B5CE8084247E3E7F001F1205 /* ConstraintLayoutSupportDSL.swift in Sources */,
 				B5CE806E247E3E7F001F1205 /* ConstraintMakerExtendable.swift in Sources */,
@@ -611,6 +597,7 @@
 				B5CE80A4247E4038001F1205 /* Request.swift in Sources */,
 				B5CE807C247E3E7F001F1205 /* ConstraintLayoutGuideDSL.swift in Sources */,
 				B5CE80A6247E4038001F1205 /* ResponseSerialization.swift in Sources */,
+				B5CE80AE247E63B3001F1205 /* VedioData.swift in Sources */,
 				B5CE8069247E3E7F001F1205 /* ConstraintViewDSL.swift in Sources */,
 				B53E1ABF247CC764004BBED2 /* AccountHeaderView.swift in Sources */,
 				B5CE8073247E3E7F001F1205 /* ConstraintView.swift in Sources */,
@@ -639,6 +626,7 @@
 				B53E1ABA247CC623004BBED2 /* SubscriptionsViewController.swift in Sources */,
 				B5CE8074247E3E7F001F1205 /* ConstraintLayoutGuide.swift in Sources */,
 				B5CE8070247E3E7F001F1205 /* ConstraintInsetTarget.swift in Sources */,
+				B5CE80AC247E61DE001F1205 /* VedioDetailHeaderView.swift in Sources */,
 				B53E1AAF247CC521004BBED2 /* NavigationController.swift in Sources */,
 				B5CE8067247E3E7F001F1205 /* ConstraintMakerPriortizable.swift in Sources */,
 				B5CE8068247E3E7F001F1205 /* ConstraintAttributes.swift in Sources */,
