@@ -12,10 +12,10 @@ private let cellReuseIdentifier = "VedioCell"
 
 class HomeViewController: BaseViewController {
     
-    let menuTitles = ["What Does Jared Kushner Believe?", "hqdefault-2", "Whoner & losers", "hqdefault-1", "Cnn:the age channage", "hqdefault-6"]
-    let logoImages = ["channel1", "channel2", "channel3", "channel4", "channel5", "channel6"]
-    let descs = ["Molly   2020-05-26 18:42", "Seeker   2020-05-26 17:01", "Molly   2020-05-26 18:42", "Molly   2020-05-26 18:42", "Molly   2020-05-26 18:42", " 2020-05-26 18:42"]
-    let times = ["01:52", "03:08", "00:53", "02:15", "03:21", "04:28"]
+    let menuTitles = ["What Does Jared Kushner Believe?", "hqdefault-2", "Whoner & losers", "hqdefault-1", "Cnn:the age channage", "hqdefault-6", "What Does Jared Kushner Believe?", "hqdefault-2", "Whoner & losers", "hqdefault-1", "Cnn:the age channage", "hqdefault-6"]
+    let logoImages = ["channel1", "channel2", "channel3", "channel4", "channel5", "channel6", "channel1", "channel2", "channel3", "channel4", "channel5", "channel6"]
+    let descs = ["Molly   2020-05-26 18:42", "Seeker   2020-05-26 17:01", "Molly   2020-05-26 18:42", "Molly   2020-05-26 18:42", "Molly   2020-05-26 18:42", " 2020-05-26 18:42", "Molly   2020-05-26 18:42", "Seeker   2020-05-26 17:01", "Molly   2020-05-26 18:42", "Molly   2020-05-26 18:42", "Molly   2020-05-26 18:42", " 2020-05-26 18:42"]
+    let times = ["01:52", "03:08", "00:53", "02:15", "03:21", "04:28", "01:52", "03:08", "00:53", "02:15", "03:21", "04:28"]
     
     var tableview : UITableView?
     
