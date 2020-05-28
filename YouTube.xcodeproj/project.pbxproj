@@ -28,6 +28,8 @@
 		B53E1AC6247D14C6004BBED2 /* AccountVedioInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53E1AC5247D14C6004BBED2 /* AccountVedioInfoCell.swift */; };
 		B53E1AC9247D2450004BBED2 /* VedioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53E1AC8247D2450004BBED2 /* VedioCell.swift */; };
 		B53E1ACB247D2DC0004BBED2 /* VedioDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53E1ACA247D2DC0004BBED2 /* VedioDetailController.swift */; };
+		B58A522C247FA5960072F589 /* BasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58A522A247FA5960072F589 /* BasicContentView.swift */; };
+		B58A522D247FA5960072F589 /* BouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58A522B247FA5960072F589 /* BouncesContentView.swift */; };
 		B5CE7FBE247E1589001F1205 /* SubscripHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE7FBD247E1589001F1205 /* SubscripHeaderView.swift */; };
 		B5CE8064247E3E7F001F1205 /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE8042247E3E7F001F1205 /* ConstraintMultiplierTarget.swift */; };
 		B5CE8065247E3E7F001F1205 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE8043247E3E7F001F1205 /* LayoutConstraintItem.swift */; };
@@ -84,6 +86,13 @@
 		B5CE80AE247E63B3001F1205 /* VedioData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE80AD247E63B3001F1205 /* VedioData.swift */; };
 		B5CE80B0247E65ED001F1205 /* RecomandVedioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE80AF247E65ED001F1205 /* RecomandVedioCell.swift */; };
 		B5CE80C3247F662A001F1205 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CE80C1247F662A001F1205 /* MBProgressHUD.m */; };
+		B5CE80CC247F8F20001F1205 /* ESTabBarItemMoreContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE80C5247F8F20001F1205 /* ESTabBarItemMoreContentView.swift */; };
+		B5CE80CD247F8F20001F1205 /* ESTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE80C6247F8F20001F1205 /* ESTabBarController.swift */; };
+		B5CE80CE247F8F20001F1205 /* ESTabBarItemContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE80C7247F8F20001F1205 /* ESTabBarItemContentView.swift */; };
+		B5CE80CF247F8F20001F1205 /* ESTabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE80C8247F8F20001F1205 /* ESTabBarItem.swift */; };
+		B5CE80D0247F8F20001F1205 /* ESTabBarItemBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE80C9247F8F20001F1205 /* ESTabBarItemBadgeView.swift */; };
+		B5CE80D1247F8F20001F1205 /* ESTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE80CA247F8F20001F1205 /* ESTabBar.swift */; };
+		B5CE80D2247F8F20001F1205 /* ESTabBarItemContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE80CB247F8F20001F1205 /* ESTabBarItemContainer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -131,6 +140,8 @@
 		B53E1AC5247D14C6004BBED2 /* AccountVedioInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVedioInfoCell.swift; sourceTree = "<group>"; };
 		B53E1AC8247D2450004BBED2 /* VedioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VedioCell.swift; sourceTree = "<group>"; };
 		B53E1ACA247D2DC0004BBED2 /* VedioDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VedioDetailController.swift; sourceTree = "<group>"; };
+		B58A522A247FA5960072F589 /* BasicContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicContentView.swift; sourceTree = "<group>"; };
+		B58A522B247FA5960072F589 /* BouncesContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BouncesContentView.swift; sourceTree = "<group>"; };
 		B5CE7FBD247E1589001F1205 /* SubscripHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscripHeaderView.swift; sourceTree = "<group>"; };
 		B5CE8042247E3E7F001F1205 /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
 		B5CE8043247E3E7F001F1205 /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraintItem.swift; sourceTree = "<group>"; };
@@ -189,6 +200,13 @@
 		B5CE80BC247F65DC001F1205 /* YouTube-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YouTube-Bridging-Header.h"; sourceTree = "<group>"; };
 		B5CE80C1247F662A001F1205 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		B5CE80C2247F662A001F1205 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		B5CE80C5247F8F20001F1205 /* ESTabBarItemMoreContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBarItemMoreContentView.swift; sourceTree = "<group>"; };
+		B5CE80C6247F8F20001F1205 /* ESTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBarController.swift; sourceTree = "<group>"; };
+		B5CE80C7247F8F20001F1205 /* ESTabBarItemContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBarItemContentView.swift; sourceTree = "<group>"; };
+		B5CE80C8247F8F20001F1205 /* ESTabBarItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBarItem.swift; sourceTree = "<group>"; };
+		B5CE80C9247F8F20001F1205 /* ESTabBarItemBadgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBarItemBadgeView.swift; sourceTree = "<group>"; };
+		B5CE80CA247F8F20001F1205 /* ESTabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBar.swift; sourceTree = "<group>"; };
+		B5CE80CB247F8F20001F1205 /* ESTabBarItemContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ESTabBarItemContainer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -375,9 +393,19 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B58A521B247F92F20072F589 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				B58A522A247FA5960072F589 /* BasicContentView.swift */,
+				B58A522B247FA5960072F589 /* BouncesContentView.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
 		B5CE7FFB247E3E40001F1205 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				B5CE80C4247F8F20001F1205 /* ESTabBar */,
 				B5CE80C0247F662A001F1205 /* MBProgressHUD */,
 				B5CE8041247E3E7F001F1205 /* SnapKit */,
 				B5CE8086247E4038001F1205 /* Alamofire */,
@@ -457,6 +485,21 @@
 				B5CE80C1247F662A001F1205 /* MBProgressHUD.m */,
 			);
 			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		B5CE80C4247F8F20001F1205 /* ESTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				B58A521B247F92F20072F589 /* Content */,
+				B5CE80C5247F8F20001F1205 /* ESTabBarItemMoreContentView.swift */,
+				B5CE80C6247F8F20001F1205 /* ESTabBarController.swift */,
+				B5CE80C7247F8F20001F1205 /* ESTabBarItemContentView.swift */,
+				B5CE80C8247F8F20001F1205 /* ESTabBarItem.swift */,
+				B5CE80C9247F8F20001F1205 /* ESTabBarItemBadgeView.swift */,
+				B5CE80CA247F8F20001F1205 /* ESTabBar.swift */,
+				B5CE80CB247F8F20001F1205 /* ESTabBarItemContainer.swift */,
+			);
+			path = ESTabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -595,6 +638,7 @@
 				B53E1AC4247CF827004BBED2 /* AccountInfo.swift in Sources */,
 				B5CE809F247E4038001F1205 /* AFError.swift in Sources */,
 				B5CE8085247E3E7F001F1205 /* ConstraintMakerRelatable.swift in Sources */,
+				B5CE80D0247F8F20001F1205 /* ESTabBarItemBadgeView.swift in Sources */,
 				B5CE8077247E3E7F001F1205 /* ConstraintConstantTarget.swift in Sources */,
 				B5CE806D247E3E7F001F1205 /* ConstraintDSL.swift in Sources */,
 				B5CE80B0247E65ED001F1205 /* RecomandVedioCell.swift in Sources */,
@@ -612,11 +656,13 @@
 				B5CE806A247E3E7F001F1205 /* ConstraintPriorityTarget.swift in Sources */,
 				B5CE80A4247E4038001F1205 /* Request.swift in Sources */,
 				B5CE807C247E3E7F001F1205 /* ConstraintLayoutGuideDSL.swift in Sources */,
+				B5CE80CC247F8F20001F1205 /* ESTabBarItemMoreContentView.swift in Sources */,
 				B5CE80A6247E4038001F1205 /* ResponseSerialization.swift in Sources */,
 				B5CE80AE247E63B3001F1205 /* VedioData.swift in Sources */,
 				B5CE8069247E3E7F001F1205 /* ConstraintViewDSL.swift in Sources */,
 				B53E1ABF247CC764004BBED2 /* AccountHeaderView.swift in Sources */,
 				B5CE8073247E3E7F001F1205 /* ConstraintView.swift in Sources */,
+				B5CE80D2247F8F20001F1205 /* ESTabBarItemContainer.swift in Sources */,
 				B5CE80A2247E4038001F1205 /* Response.swift in Sources */,
 				B5CE807E247E3E7F001F1205 /* ConstraintItem.swift in Sources */,
 				B5CE8075247E3E7F001F1205 /* ConstraintLayoutSupport.swift in Sources */,
@@ -649,16 +695,22 @@
 				B5CE8068247E3E7F001F1205 /* ConstraintAttributes.swift in Sources */,
 				B5CE806B247E3E7F001F1205 /* ConstraintInsets.swift in Sources */,
 				B5CE809B247E4038001F1205 /* Timeline.swift in Sources */,
+				B5CE80CE247F8F20001F1205 /* ESTabBarItemContentView.swift in Sources */,
+				B5CE80CF247F8F20001F1205 /* ESTabBarItem.swift in Sources */,
 				B5CE8083247E3E7F001F1205 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
 				B53E1AB9247CC623004BBED2 /* HomeViewController.swift in Sources */,
 				B5CE809E247E4038001F1205 /* ParameterEncoding.swift in Sources */,
 				B5CE8081247E3E7F001F1205 /* ConstraintRelatableTarget.swift in Sources */,
 				B5CE80A1247E4038001F1205 /* Notifications.swift in Sources */,
+				B58A522D247FA5960072F589 /* BouncesContentView.swift in Sources */,
+				B5CE80D1247F8F20001F1205 /* ESTabBar.swift in Sources */,
 				B53E1A3E2473BAAD004BBED2 /* AppDelegate.swift in Sources */,
 				B53E1AAC247CBB35004BBED2 /* Common.swift in Sources */,
 				B53E1AC6247D14C6004BBED2 /* AccountVedioInfoCell.swift in Sources */,
 				B5CE8076247E3E7F001F1205 /* Typealiases.swift in Sources */,
+				B58A522C247FA5960072F589 /* BasicContentView.swift in Sources */,
 				B5CE7FBE247E1589001F1205 /* SubscripHeaderView.swift in Sources */,
+				B5CE80CD247F8F20001F1205 /* ESTabBarController.swift in Sources */,
 				B5CE8072247E3E7F001F1205 /* UILayoutSupport+Extensions.swift in Sources */,
 				B5CE8066247E3E7F001F1205 /* ConstraintDescription.swift in Sources */,
 				B5CE80A0247E4038001F1205 /* Validation.swift in Sources */,

@@ -19,9 +19,20 @@ let kAppDarkGrayColor = UIColor(red: 96.0/255.0, green: 96.0/255.0, blue: 96.0/2
 let kAppLineGrayColor = UIColor(red: 237.0/255.0, green: 237.0/255.0, blue: 237.0/255.0, alpha: 1.0)
 let kAppTextColor = UIColor(red: 68.0/255.0, green: 68.0/255.0, blue: 68.0/255.0, alpha: 1.0)
 
-let kAppNavBarColor = UIColor(red: 248.0/255.0, green: 8.0/255.0, blue: 42.0/255.0, alpha: 1.0)
+let kAppNavBarColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
 let kAppTabBarColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
+
+let kAppTabBarTintColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
 let kAppTabbarUnselColor = UIColor(red: 91/255.0, green: 14.0/255.0, blue: 13.0/255.0, alpha: 1.0)
 
 let MainScreenWidth = UIScreen.main.bounds.width
 let MainScreenHeight = UIScreen.main.bounds.height
+
+func RGB(r:CGFloat, g:CGFloat, b:CGFloat) -> UIColor {
+    return UIColor(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: 1.0)
+}
+
+func RGBA(r:CGFloat, g:CGFloat, b:CGFloat, a:CGFloat) -> UIColor {
+    return UIColor(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: a)
+}
+
