@@ -8,7 +8,7 @@
 
 import UIKit
 
-private let cellReuseIdentifier = "RecomandVedioCell"
+typealias playEnd = (_ palyTime: Int)->()
 
 class VedioDetailController: BaseViewController {
     
@@ -21,12 +21,21 @@ class VedioDetailController: BaseViewController {
     var vedioId: String!
     var vedioData: VedioData!
     
+    var end: playEnd!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Vedio Detail"
         self.setLeftImageNamed(name: "back", action: #selector(self.popBackController))
         
         setupUI()
+    }
+    
+    override func popBackController() {
+        if (end != nil) {
+            end!(100)
+        }
+        self.navigationController?.popViewController(animated: true)
     }
     
     private func setupUI(){
@@ -41,7 +50,7 @@ class VedioDetailController: BaseViewController {
         tableview = UITableView(frame: view.bounds, style: UITableView.Style.grouped)
         tableview?.delegate = self
         tableview?.dataSource = self
-        tableview?.register(RecomandVedioCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+        tableview?.register(RecomandVedioCell.self, forCellReuseIdentifier: "RecomandVedioCell")
         tableview?.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableview?.sectionHeaderHeight = 0
         tableview?.sectionFooterHeight = 0
@@ -58,7 +67,7 @@ class VedioDetailController: BaseViewController {
 
 extension VedioDetailController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for:indexPath) as! RecomandVedioCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RecomandVedioCell", for:indexPath) as! RecomandVedioCell
         cell.vedioImageView.image = UIImage(named: menuTitles[indexPath.row])
         cell.titleLabel.text = menuTitles[indexPath.row]
         cell.descriptionLabel.text = descs[indexPath.row]

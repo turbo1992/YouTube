@@ -79,6 +79,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         let detail = VedioDetailController()
         detail.vedioData = data
+        detail.end = {(playTime: Int)->() in
+            print("playTime----->\(playTime)")
+        }
         self.navigationController?.pushViewController(detail, animated: true)
     }
 }
