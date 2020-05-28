@@ -30,5 +30,17 @@ class BaseViewController: UIViewController {
     @objc func popBackController() {
         self.navigationController?.popViewController(animated: true)
     }
-
+    
+    func showDetailHint(hint: String) {
+        let view = UIApplication.shared.delegate?.window
+        let hud = MBProgressHUD.showAdded(to:view!!, animated: true)
+        hud.isUserInteractionEnabled = false
+        hud.mode = MBProgressHUDMode.text
+        hud.detailsLabel.text = hint
+        hud.margin = 11.0
+        hud.detailsLabel.font = UIFont.systemFont(ofSize: 14.0)
+        hud.offset = CGPoint(x: 0, y: 44)
+        hud.removeFromSuperViewOnHide = true
+        hud.hide(animated: true, afterDelay: 2.0)
+    }
 }

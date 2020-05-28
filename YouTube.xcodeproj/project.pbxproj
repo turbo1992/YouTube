@@ -83,6 +83,7 @@
 		B5CE80AC247E61DE001F1205 /* VedioDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE80AB247E61DE001F1205 /* VedioDetailHeaderView.swift */; };
 		B5CE80AE247E63B3001F1205 /* VedioData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE80AD247E63B3001F1205 /* VedioData.swift */; };
 		B5CE80B0247E65ED001F1205 /* RecomandVedioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE80AF247E65ED001F1205 /* RecomandVedioCell.swift */; };
+		B5CE80C3247F662A001F1205 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CE80C1247F662A001F1205 /* MBProgressHUD.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,6 +186,9 @@
 		B5CE80AB247E61DE001F1205 /* VedioDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VedioDetailHeaderView.swift; sourceTree = "<group>"; };
 		B5CE80AD247E63B3001F1205 /* VedioData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VedioData.swift; sourceTree = "<group>"; };
 		B5CE80AF247E65ED001F1205 /* RecomandVedioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomandVedioCell.swift; sourceTree = "<group>"; };
+		B5CE80BC247F65DC001F1205 /* YouTube-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "YouTube-Bridging-Header.h"; sourceTree = "<group>"; };
+		B5CE80C1247F662A001F1205 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		B5CE80C2247F662A001F1205 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -242,6 +246,7 @@
 				B53E1A462473BAAF004BBED2 /* Assets.xcassets */,
 				B53E1A482473BAAF004BBED2 /* LaunchScreen.storyboard */,
 				B53E1A4B2473BAAF004BBED2 /* Info.plist */,
+				B5CE80BC247F65DC001F1205 /* YouTube-Bridging-Header.h */,
 			);
 			path = YouTube;
 			sourceTree = "<group>";
@@ -373,6 +378,7 @@
 		B5CE7FFB247E3E40001F1205 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				B5CE80C0247F662A001F1205 /* MBProgressHUD */,
 				B5CE8041247E3E7F001F1205 /* SnapKit */,
 				B5CE8086247E4038001F1205 /* Alamofire */,
 			);
@@ -444,6 +450,15 @@
 			path = Alamofire;
 			sourceTree = "<group>";
 		};
+		B5CE80C0247F662A001F1205 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				B5CE80C2247F662A001F1205 /* MBProgressHUD.h */,
+				B5CE80C1247F662A001F1205 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -512,6 +527,7 @@
 				TargetAttributes = {
 					B53E1A392473BAAD004BBED2 = {
 						CreatedOnToolsVersion = 11.4;
+						LastSwiftMigration = 1140;
 					};
 					B53E1A4F2473BAB0004BBED2 = {
 						CreatedOnToolsVersion = 11.4;
@@ -606,6 +622,7 @@
 				B5CE8075247E3E7F001F1205 /* ConstraintLayoutSupport.swift in Sources */,
 				B5CE809D247E4038001F1205 /* Result.swift in Sources */,
 				B5CE8079247E3E7F001F1205 /* ConstraintMakerEditable.swift in Sources */,
+				B5CE80C3247F662A001F1205 /* MBProgressHUD.m in Sources */,
 				B5CE807F247E3E7F001F1205 /* Constraint.swift in Sources */,
 				B5CE8082247E3E7F001F1205 /* LayoutConstraint.swift in Sources */,
 				B5CE806F247E3E7F001F1205 /* ConstraintPriority.swift in Sources */,
@@ -818,6 +835,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6D5U7VM96;
 				INFOPLIST_FILE = YouTube/Info.plist;
@@ -827,6 +845,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.turbo.YouTube;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YouTube/YouTube-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -836,6 +856,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = P6D5U7VM96;
 				INFOPLIST_FILE = YouTube/Info.plist;
@@ -845,6 +866,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.turbo.YouTube;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "YouTube/YouTube-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

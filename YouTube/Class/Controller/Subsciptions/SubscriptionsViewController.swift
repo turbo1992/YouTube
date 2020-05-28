@@ -76,8 +76,12 @@ extension SubscriptionsViewController: UITableViewDelegate, UITableViewDataSourc
         data.authLogo = logoImages[indexPath.row]
         data.createTime = descs[indexPath.row]
         
+        weak var weakSelf = self
         let detail = VedioDetailController()
         detail.vedioData = data
+        detail.end = {(playTime: Int)->() in
+            weakSelf!.showDetailHint(hint: "Already Record")
+        }
         self.navigationController?.pushViewController(detail, animated: true)
     }
 }
