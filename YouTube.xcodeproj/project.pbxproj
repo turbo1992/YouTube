@@ -16,7 +16,6 @@
 		B53E1A602473BAB0004BBED2 /* YouTubeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53E1A5F2473BAB0004BBED2 /* YouTubeUITests.swift */; };
 		B53E1AAA247CB601004BBED2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53E1AA9247CB601004BBED2 /* BaseViewController.swift */; };
 		B53E1AAC247CBB35004BBED2 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53E1AAB247CBB35004BBED2 /* Common.swift */; };
-		B53E1AAF247CC521004BBED2 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53E1AAD247CC521004BBED2 /* NavigationController.swift */; };
 		B53E1AB0247CC521004BBED2 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53E1AAE247CC521004BBED2 /* TabBarController.swift */; };
 		B53E1AB9247CC623004BBED2 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53E1AB2247CC623004BBED2 /* HomeViewController.swift */; };
 		B53E1ABA247CC623004BBED2 /* SubscriptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53E1AB4247CC623004BBED2 /* SubscriptionsViewController.swift */; };
@@ -28,6 +27,7 @@
 		B53E1AC6247D14C6004BBED2 /* AccountVedioInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53E1AC5247D14C6004BBED2 /* AccountVedioInfoCell.swift */; };
 		B53E1AC9247D2450004BBED2 /* VedioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53E1AC8247D2450004BBED2 /* VedioCell.swift */; };
 		B53E1ACB247D2DC0004BBED2 /* VedioDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53E1ACA247D2DC0004BBED2 /* VedioDetailController.swift */; };
+		B56623B5247FA94100B7F2DD /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623B4247FA94100B7F2DD /* BaseNavigationController.swift */; };
 		B58A522C247FA5960072F589 /* BasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58A522A247FA5960072F589 /* BasicContentView.swift */; };
 		B58A522D247FA5960072F589 /* BouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58A522B247FA5960072F589 /* BouncesContentView.swift */; };
 		B5CE7FBE247E1589001F1205 /* SubscripHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE7FBD247E1589001F1205 /* SubscripHeaderView.swift */; };
@@ -128,7 +128,6 @@
 		B53E1A612473BAB0004BBED2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B53E1AA9247CB601004BBED2 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		B53E1AAB247CBB35004BBED2 /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
-		B53E1AAD247CC521004BBED2 /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		B53E1AAE247CC521004BBED2 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		B53E1AB2247CC623004BBED2 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		B53E1AB4247CC623004BBED2 /* SubscriptionsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionsViewController.swift; sourceTree = "<group>"; };
@@ -140,6 +139,7 @@
 		B53E1AC5247D14C6004BBED2 /* AccountVedioInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVedioInfoCell.swift; sourceTree = "<group>"; };
 		B53E1AC8247D2450004BBED2 /* VedioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VedioCell.swift; sourceTree = "<group>"; };
 		B53E1ACA247D2DC0004BBED2 /* VedioDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VedioDetailController.swift; sourceTree = "<group>"; };
+		B56623B4247FA94100B7F2DD /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 		B58A522A247FA5960072F589 /* BasicContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicContentView.swift; sourceTree = "<group>"; };
 		B58A522B247FA5960072F589 /* BouncesContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BouncesContentView.swift; sourceTree = "<group>"; };
 		B5CE7FBD247E1589001F1205 /* SubscripHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscripHeaderView.swift; sourceTree = "<group>"; };
@@ -322,7 +322,7 @@
 			isa = PBXGroup;
 			children = (
 				B53E1AA9247CB601004BBED2 /* BaseViewController.swift */,
-				B53E1AAD247CC521004BBED2 /* NavigationController.swift */,
+				B56623B4247FA94100B7F2DD /* BaseNavigationController.swift */,
 				B53E1AAE247CC521004BBED2 /* TabBarController.swift */,
 			);
 			path = Base;
@@ -690,7 +690,6 @@
 				B5CE8074247E3E7F001F1205 /* ConstraintLayoutGuide.swift in Sources */,
 				B5CE8070247E3E7F001F1205 /* ConstraintInsetTarget.swift in Sources */,
 				B5CE80AC247E61DE001F1205 /* VedioDetailHeaderView.swift in Sources */,
-				B53E1AAF247CC521004BBED2 /* NavigationController.swift in Sources */,
 				B5CE8067247E3E7F001F1205 /* ConstraintMakerPriortizable.swift in Sources */,
 				B5CE8068247E3E7F001F1205 /* ConstraintAttributes.swift in Sources */,
 				B5CE806B247E3E7F001F1205 /* ConstraintInsets.swift in Sources */,
@@ -712,6 +711,7 @@
 				B5CE7FBE247E1589001F1205 /* SubscripHeaderView.swift in Sources */,
 				B5CE80CD247F8F20001F1205 /* ESTabBarController.swift in Sources */,
 				B5CE8072247E3E7F001F1205 /* UILayoutSupport+Extensions.swift in Sources */,
+				B56623B5247FA94100B7F2DD /* BaseNavigationController.swift in Sources */,
 				B5CE8066247E3E7F001F1205 /* ConstraintDescription.swift in Sources */,
 				B5CE80A0247E4038001F1205 /* Validation.swift in Sources */,
 				B5CE8098247E4038001F1205 /* TaskDelegate.swift in Sources */,

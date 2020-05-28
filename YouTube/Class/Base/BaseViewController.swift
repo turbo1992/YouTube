@@ -14,13 +14,17 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
         self.navigationController?.navigationBar.tintColor = UIColor.white
-//        self.hidesBottomBarWhenPushed = true
     }
     
     func setLeftImageNamed(name: String, action: Selector) {
         let image = UIImage(named: name)
         let backItem = UIBarButtonItem.init(image: image, style: UIBarButtonItem.Style.plain, target: self, action: action)
         self.navigationItem.leftBarButtonItem = backItem
+        
+        // 自定义返回按钮恢复返回手势
+        if (navigationController?.viewControllers.count ?? 0) > 1 {
+            navigationController?.interactivePopGestureRecognizer?.delegate = self as? UIGestureRecognizerDelegate
+        }
     }
     
     func setNavigationBarBackgroundImage(image: UIImage, tintColor: UIColor, textColor: UIColor, style: UIStatusBarStyle) {
@@ -37,7 +41,7 @@ class BaseViewController: UIViewController {
         hud.isUserInteractionEnabled = false
         hud.mode = MBProgressHUDMode.text
         hud.detailsLabel.text = hint
-        hud.margin = 11.0
+        hud.margin = 9.0
         hud.detailsLabel.font = UIFont.systemFont(ofSize: 14.0)
         hud.offset = CGPoint(x: 0, y: 44)
         hud.removeFromSuperViewOnHide = true
