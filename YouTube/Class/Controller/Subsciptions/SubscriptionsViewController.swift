@@ -66,7 +66,7 @@ extension SubscriptionsViewController: UITableViewDelegate, UITableViewDataSourc
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return MainScreenWidth*0.6 + 70
+        return MainScreenWidth * 0.6 + 70
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -82,6 +82,7 @@ extension SubscriptionsViewController: UITableViewDelegate, UITableViewDataSourc
         detail.end = {(playTime: Int)->() in
             weakSelf!.showDetailHint(hint: "Already Record")
         }
+        detail.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(detail, animated: true)
     }
 }

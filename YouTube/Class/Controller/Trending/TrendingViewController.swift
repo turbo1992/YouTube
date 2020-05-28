@@ -14,6 +14,8 @@ class TrendingViewController: BaseViewController {
         super.viewDidLoad()
         
         createUI()
+        
+        HttpClient().getArticleList()
     }
     
     func createUI() {

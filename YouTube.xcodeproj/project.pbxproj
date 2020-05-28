@@ -28,6 +28,26 @@
 		B53E1AC9247D2450004BBED2 /* VedioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53E1AC8247D2450004BBED2 /* VedioCell.swift */; };
 		B53E1ACB247D2DC0004BBED2 /* VedioDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53E1ACA247D2DC0004BBED2 /* VedioDetailController.swift */; };
 		B56623B5247FA94100B7F2DD /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623B4247FA94100B7F2DD /* BaseNavigationController.swift */; };
+		B56623CA247FB3A400B7F2DD /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623B9247FB3A400B7F2DD /* TaskDelegate.swift */; };
+		B56623CB247FB3A400B7F2DD /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623BA247FB3A400B7F2DD /* MultipartFormData.swift */; };
+		B56623CC247FB3A400B7F2DD /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623BB247FB3A400B7F2DD /* NetworkReachabilityManager.swift */; };
+		B56623CD247FB3A400B7F2DD /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623BC247FB3A400B7F2DD /* Timeline.swift */; };
+		B56623CE247FB3A400B7F2DD /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623BD247FB3A400B7F2DD /* DispatchQueue+Alamofire.swift */; };
+		B56623CF247FB3A400B7F2DD /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623BE247FB3A400B7F2DD /* Result.swift */; };
+		B56623D0247FB3A400B7F2DD /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623BF247FB3A400B7F2DD /* ParameterEncoding.swift */; };
+		B56623D1247FB3A400B7F2DD /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623C0247FB3A400B7F2DD /* AFError.swift */; };
+		B56623D2247FB3A400B7F2DD /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623C1247FB3A400B7F2DD /* Validation.swift */; };
+		B56623D3247FB3A400B7F2DD /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623C2247FB3A400B7F2DD /* Notifications.swift */; };
+		B56623D4247FB3A400B7F2DD /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623C3247FB3A400B7F2DD /* Response.swift */; };
+		B56623D5247FB3A400B7F2DD /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623C4247FB3A400B7F2DD /* Alamofire.swift */; };
+		B56623D6247FB3A400B7F2DD /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623C5247FB3A400B7F2DD /* Request.swift */; };
+		B56623D7247FB3A400B7F2DD /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623C6247FB3A400B7F2DD /* SessionManager.swift */; };
+		B56623D8247FB3A400B7F2DD /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623C7247FB3A400B7F2DD /* ResponseSerialization.swift */; };
+		B56623D9247FB3A400B7F2DD /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623C8247FB3A400B7F2DD /* ServerTrustPolicy.swift */; };
+		B56623DA247FB3A400B7F2DD /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623C9247FB3A400B7F2DD /* SessionDelegate.swift */; };
+		B56623E0247FB5EA00B7F2DD /* YTBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623DF247FB5EA00B7F2DD /* YTBManager.swift */; };
+		B56623E2247FB5F900B7F2DD /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623E1247FB5F900B7F2DD /* ModelManager.swift */; };
+		B56623E4247FB60A00B7F2DD /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623E3247FB60A00B7F2DD /* HttpClient.swift */; };
 		B58A522C247FA5960072F589 /* BasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58A522A247FA5960072F589 /* BasicContentView.swift */; };
 		B58A522D247FA5960072F589 /* BouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58A522B247FA5960072F589 /* BouncesContentView.swift */; };
 		B5CE7FBE247E1589001F1205 /* SubscripHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE7FBD247E1589001F1205 /* SubscripHeaderView.swift */; };
@@ -65,23 +85,6 @@
 		B5CE8083247E3E7F001F1205 /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE8061247E3E7F001F1205 /* ConstraintLayoutGuide+Extensions.swift */; };
 		B5CE8084247E3E7F001F1205 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE8062247E3E7F001F1205 /* ConstraintLayoutSupportDSL.swift */; };
 		B5CE8085247E3E7F001F1205 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE8063247E3E7F001F1205 /* ConstraintMakerRelatable.swift */; };
-		B5CE8098247E4038001F1205 /* TaskDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE8087247E4038001F1205 /* TaskDelegate.swift */; };
-		B5CE8099247E4038001F1205 /* MultipartFormData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE8088247E4038001F1205 /* MultipartFormData.swift */; };
-		B5CE809A247E4038001F1205 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE8089247E4038001F1205 /* NetworkReachabilityManager.swift */; };
-		B5CE809B247E4038001F1205 /* Timeline.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE808A247E4038001F1205 /* Timeline.swift */; };
-		B5CE809C247E4038001F1205 /* DispatchQueue+Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE808B247E4038001F1205 /* DispatchQueue+Alamofire.swift */; };
-		B5CE809D247E4038001F1205 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE808C247E4038001F1205 /* Result.swift */; };
-		B5CE809E247E4038001F1205 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE808D247E4038001F1205 /* ParameterEncoding.swift */; };
-		B5CE809F247E4038001F1205 /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE808E247E4038001F1205 /* AFError.swift */; };
-		B5CE80A0247E4038001F1205 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE808F247E4038001F1205 /* Validation.swift */; };
-		B5CE80A1247E4038001F1205 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE8090247E4038001F1205 /* Notifications.swift */; };
-		B5CE80A2247E4038001F1205 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE8091247E4038001F1205 /* Response.swift */; };
-		B5CE80A3247E4038001F1205 /* Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE8092247E4038001F1205 /* Alamofire.swift */; };
-		B5CE80A4247E4038001F1205 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE8093247E4038001F1205 /* Request.swift */; };
-		B5CE80A5247E4038001F1205 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE8094247E4038001F1205 /* SessionManager.swift */; };
-		B5CE80A6247E4038001F1205 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE8095247E4038001F1205 /* ResponseSerialization.swift */; };
-		B5CE80A7247E4038001F1205 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE8096247E4038001F1205 /* ServerTrustPolicy.swift */; };
-		B5CE80A8247E4038001F1205 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE8097247E4038001F1205 /* SessionDelegate.swift */; };
 		B5CE80AC247E61DE001F1205 /* VedioDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE80AB247E61DE001F1205 /* VedioDetailHeaderView.swift */; };
 		B5CE80AE247E63B3001F1205 /* VedioData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE80AD247E63B3001F1205 /* VedioData.swift */; };
 		B5CE80B0247E65ED001F1205 /* RecomandVedioCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE80AF247E65ED001F1205 /* RecomandVedioCell.swift */; };
@@ -140,6 +143,26 @@
 		B53E1AC8247D2450004BBED2 /* VedioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VedioCell.swift; sourceTree = "<group>"; };
 		B53E1ACA247D2DC0004BBED2 /* VedioDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VedioDetailController.swift; sourceTree = "<group>"; };
 		B56623B4247FA94100B7F2DD /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		B56623B9247FB3A400B7F2DD /* TaskDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDelegate.swift; sourceTree = "<group>"; };
+		B56623BA247FB3A400B7F2DD /* MultipartFormData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartFormData.swift; sourceTree = "<group>"; };
+		B56623BB247FB3A400B7F2DD /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
+		B56623BC247FB3A400B7F2DD /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
+		B56623BD247FB3A400B7F2DD /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
+		B56623BE247FB3A400B7F2DD /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		B56623BF247FB3A400B7F2DD /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		B56623C0247FB3A400B7F2DD /* AFError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFError.swift; sourceTree = "<group>"; };
+		B56623C1247FB3A400B7F2DD /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		B56623C2247FB3A400B7F2DD /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		B56623C3247FB3A400B7F2DD /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		B56623C4247FB3A400B7F2DD /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
+		B56623C5247FB3A400B7F2DD /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		B56623C6247FB3A400B7F2DD /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
+		B56623C7247FB3A400B7F2DD /* ResponseSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseSerialization.swift; sourceTree = "<group>"; };
+		B56623C8247FB3A400B7F2DD /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerTrustPolicy.swift; sourceTree = "<group>"; };
+		B56623C9247FB3A400B7F2DD /* SessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDelegate.swift; sourceTree = "<group>"; };
+		B56623DF247FB5EA00B7F2DD /* YTBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTBManager.swift; sourceTree = "<group>"; };
+		B56623E1247FB5F900B7F2DD /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
+		B56623E3247FB60A00B7F2DD /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
 		B58A522A247FA5960072F589 /* BasicContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicContentView.swift; sourceTree = "<group>"; };
 		B58A522B247FA5960072F589 /* BouncesContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BouncesContentView.swift; sourceTree = "<group>"; };
 		B5CE7FBD247E1589001F1205 /* SubscripHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscripHeaderView.swift; sourceTree = "<group>"; };
@@ -177,23 +200,6 @@
 		B5CE8061247E3E7F001F1205 /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
 		B5CE8062247E3E7F001F1205 /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
 		B5CE8063247E3E7F001F1205 /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
-		B5CE8087247E4038001F1205 /* TaskDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskDelegate.swift; sourceTree = "<group>"; };
-		B5CE8088247E4038001F1205 /* MultipartFormData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipartFormData.swift; sourceTree = "<group>"; };
-		B5CE8089247E4038001F1205 /* NetworkReachabilityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachabilityManager.swift; sourceTree = "<group>"; };
-		B5CE808A247E4038001F1205 /* Timeline.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timeline.swift; sourceTree = "<group>"; };
-		B5CE808B247E4038001F1205 /* DispatchQueue+Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DispatchQueue+Alamofire.swift"; sourceTree = "<group>"; };
-		B5CE808C247E4038001F1205 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		B5CE808D247E4038001F1205 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
-		B5CE808E247E4038001F1205 /* AFError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AFError.swift; sourceTree = "<group>"; };
-		B5CE808F247E4038001F1205 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
-		B5CE8090247E4038001F1205 /* Notifications.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
-		B5CE8091247E4038001F1205 /* Response.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
-		B5CE8092247E4038001F1205 /* Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alamofire.swift; sourceTree = "<group>"; };
-		B5CE8093247E4038001F1205 /* Request.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
-		B5CE8094247E4038001F1205 /* SessionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionManager.swift; sourceTree = "<group>"; };
-		B5CE8095247E4038001F1205 /* ResponseSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseSerialization.swift; sourceTree = "<group>"; };
-		B5CE8096247E4038001F1205 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		B5CE8097247E4038001F1205 /* SessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDelegate.swift; sourceTree = "<group>"; };
 		B5CE80AB247E61DE001F1205 /* VedioDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VedioDetailHeaderView.swift; sourceTree = "<group>"; };
 		B5CE80AD247E63B3001F1205 /* VedioData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VedioData.swift; sourceTree = "<group>"; };
 		B5CE80AF247E65ED001F1205 /* RecomandVedioCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecomandVedioCell.swift; sourceTree = "<group>"; };
@@ -290,6 +296,7 @@
 		B53E1A6D2473BAE7004BBED2 /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				B56623DB247FB5B300B7F2DD /* Manager */,
 				B5CE7FFB247E3E40001F1205 /* ThirdParty */,
 				B53E1AC2247CF806004BBED2 /* Model */,
 				B53E1AA8247CB601004BBED2 /* Base */,
@@ -393,6 +400,40 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B56623B8247FB3A400B7F2DD /* Alamofire */ = {
+			isa = PBXGroup;
+			children = (
+				B56623B9247FB3A400B7F2DD /* TaskDelegate.swift */,
+				B56623BA247FB3A400B7F2DD /* MultipartFormData.swift */,
+				B56623BB247FB3A400B7F2DD /* NetworkReachabilityManager.swift */,
+				B56623BC247FB3A400B7F2DD /* Timeline.swift */,
+				B56623BD247FB3A400B7F2DD /* DispatchQueue+Alamofire.swift */,
+				B56623BE247FB3A400B7F2DD /* Result.swift */,
+				B56623BF247FB3A400B7F2DD /* ParameterEncoding.swift */,
+				B56623C0247FB3A400B7F2DD /* AFError.swift */,
+				B56623C1247FB3A400B7F2DD /* Validation.swift */,
+				B56623C2247FB3A400B7F2DD /* Notifications.swift */,
+				B56623C3247FB3A400B7F2DD /* Response.swift */,
+				B56623C4247FB3A400B7F2DD /* Alamofire.swift */,
+				B56623C5247FB3A400B7F2DD /* Request.swift */,
+				B56623C6247FB3A400B7F2DD /* SessionManager.swift */,
+				B56623C7247FB3A400B7F2DD /* ResponseSerialization.swift */,
+				B56623C8247FB3A400B7F2DD /* ServerTrustPolicy.swift */,
+				B56623C9247FB3A400B7F2DD /* SessionDelegate.swift */,
+			);
+			path = Alamofire;
+			sourceTree = "<group>";
+		};
+		B56623DB247FB5B300B7F2DD /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				B56623DF247FB5EA00B7F2DD /* YTBManager.swift */,
+				B56623E3247FB60A00B7F2DD /* HttpClient.swift */,
+				B56623E1247FB5F900B7F2DD /* ModelManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		B58A521B247F92F20072F589 /* Content */ = {
 			isa = PBXGroup;
 			children = (
@@ -405,10 +446,10 @@
 		B5CE7FFB247E3E40001F1205 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				B56623B8247FB3A400B7F2DD /* Alamofire */,
 				B5CE80C4247F8F20001F1205 /* ESTabBar */,
 				B5CE80C0247F662A001F1205 /* MBProgressHUD */,
 				B5CE8041247E3E7F001F1205 /* SnapKit */,
-				B5CE8086247E4038001F1205 /* Alamofire */,
 			);
 			path = ThirdParty;
 			sourceTree = "<group>";
@@ -452,30 +493,6 @@
 				B5CE8063247E3E7F001F1205 /* ConstraintMakerRelatable.swift */,
 			);
 			path = SnapKit;
-			sourceTree = "<group>";
-		};
-		B5CE8086247E4038001F1205 /* Alamofire */ = {
-			isa = PBXGroup;
-			children = (
-				B5CE8087247E4038001F1205 /* TaskDelegate.swift */,
-				B5CE8088247E4038001F1205 /* MultipartFormData.swift */,
-				B5CE8089247E4038001F1205 /* NetworkReachabilityManager.swift */,
-				B5CE808A247E4038001F1205 /* Timeline.swift */,
-				B5CE808B247E4038001F1205 /* DispatchQueue+Alamofire.swift */,
-				B5CE808C247E4038001F1205 /* Result.swift */,
-				B5CE808D247E4038001F1205 /* ParameterEncoding.swift */,
-				B5CE808E247E4038001F1205 /* AFError.swift */,
-				B5CE808F247E4038001F1205 /* Validation.swift */,
-				B5CE8090247E4038001F1205 /* Notifications.swift */,
-				B5CE8091247E4038001F1205 /* Response.swift */,
-				B5CE8092247E4038001F1205 /* Alamofire.swift */,
-				B5CE8093247E4038001F1205 /* Request.swift */,
-				B5CE8094247E4038001F1205 /* SessionManager.swift */,
-				B5CE8095247E4038001F1205 /* ResponseSerialization.swift */,
-				B5CE8096247E4038001F1205 /* ServerTrustPolicy.swift */,
-				B5CE8097247E4038001F1205 /* SessionDelegate.swift */,
-			);
-			path = Alamofire;
 			sourceTree = "<group>";
 		};
 		B5CE80C0247F662A001F1205 /* MBProgressHUD */ = {
@@ -636,37 +653,34 @@
 			files = (
 				B53E1A422473BAAD004BBED2 /* ViewController.swift in Sources */,
 				B53E1AC4247CF827004BBED2 /* AccountInfo.swift in Sources */,
-				B5CE809F247E4038001F1205 /* AFError.swift in Sources */,
 				B5CE8085247E3E7F001F1205 /* ConstraintMakerRelatable.swift in Sources */,
 				B5CE80D0247F8F20001F1205 /* ESTabBarItemBadgeView.swift in Sources */,
+				B56623D6247FB3A400B7F2DD /* Request.swift in Sources */,
 				B5CE8077247E3E7F001F1205 /* ConstraintConstantTarget.swift in Sources */,
 				B5CE806D247E3E7F001F1205 /* ConstraintDSL.swift in Sources */,
 				B5CE80B0247E65ED001F1205 /* RecomandVedioCell.swift in Sources */,
-				B5CE80A3247E4038001F1205 /* Alamofire.swift in Sources */,
 				B5CE8084247E3E7F001F1205 /* ConstraintLayoutSupportDSL.swift in Sources */,
 				B5CE806E247E3E7F001F1205 /* ConstraintMakerExtendable.swift in Sources */,
 				B53E1ABC247CC623004BBED2 /* AccountViewController.swift in Sources */,
-				B5CE809C247E4038001F1205 /* DispatchQueue+Alamofire.swift in Sources */,
-				B5CE80A8247E4038001F1205 /* SessionDelegate.swift in Sources */,
 				B53E1ABB247CC623004BBED2 /* TrendingViewController.swift in Sources */,
 				B53E1ACB247D2DC0004BBED2 /* VedioDetailController.swift in Sources */,
 				B53E1AB0247CC521004BBED2 /* TabBarController.swift in Sources */,
 				B5CE8064247E3E7F001F1205 /* ConstraintMultiplierTarget.swift in Sources */,
 				B5CE8080247E3E7F001F1205 /* Debugging.swift in Sources */,
 				B5CE806A247E3E7F001F1205 /* ConstraintPriorityTarget.swift in Sources */,
-				B5CE80A4247E4038001F1205 /* Request.swift in Sources */,
 				B5CE807C247E3E7F001F1205 /* ConstraintLayoutGuideDSL.swift in Sources */,
 				B5CE80CC247F8F20001F1205 /* ESTabBarItemMoreContentView.swift in Sources */,
-				B5CE80A6247E4038001F1205 /* ResponseSerialization.swift in Sources */,
 				B5CE80AE247E63B3001F1205 /* VedioData.swift in Sources */,
 				B5CE8069247E3E7F001F1205 /* ConstraintViewDSL.swift in Sources */,
 				B53E1ABF247CC764004BBED2 /* AccountHeaderView.swift in Sources */,
+				B56623D8247FB3A400B7F2DD /* ResponseSerialization.swift in Sources */,
 				B5CE8073247E3E7F001F1205 /* ConstraintView.swift in Sources */,
 				B5CE80D2247F8F20001F1205 /* ESTabBarItemContainer.swift in Sources */,
-				B5CE80A2247E4038001F1205 /* Response.swift in Sources */,
 				B5CE807E247E3E7F001F1205 /* ConstraintItem.swift in Sources */,
+				B56623E2247FB5F900B7F2DD /* ModelManager.swift in Sources */,
 				B5CE8075247E3E7F001F1205 /* ConstraintLayoutSupport.swift in Sources */,
-				B5CE809D247E4038001F1205 /* Result.swift in Sources */,
+				B56623D9247FB3A400B7F2DD /* ServerTrustPolicy.swift in Sources */,
+				B56623CA247FB3A400B7F2DD /* TaskDelegate.swift in Sources */,
 				B5CE8079247E3E7F001F1205 /* ConstraintMakerEditable.swift in Sources */,
 				B5CE80C3247F662A001F1205 /* MBProgressHUD.m in Sources */,
 				B5CE807F247E3E7F001F1205 /* Constraint.swift in Sources */,
@@ -674,33 +688,37 @@
 				B5CE806F247E3E7F001F1205 /* ConstraintPriority.swift in Sources */,
 				B53E1AC9247D2450004BBED2 /* VedioCell.swift in Sources */,
 				B5CE8065247E3E7F001F1205 /* LayoutConstraintItem.swift in Sources */,
-				B5CE8099247E4038001F1205 /* MultipartFormData.swift in Sources */,
 				B5CE8078247E3E7F001F1205 /* ConstraintOffsetTarget.swift in Sources */,
-				B5CE809A247E4038001F1205 /* NetworkReachabilityManager.swift in Sources */,
+				B56623D0247FB3A400B7F2DD /* ParameterEncoding.swift in Sources */,
 				B5CE806C247E3E7F001F1205 /* ConstraintMakerFinalizable.swift in Sources */,
 				B5CE807A247E3E7F001F1205 /* ConstraintMaker.swift in Sources */,
+				B56623D7247FB3A400B7F2DD /* SessionManager.swift in Sources */,
 				B5CE807D247E3E7F001F1205 /* ConstraintView+Extensions.swift in Sources */,
-				B5CE80A5247E4038001F1205 /* SessionManager.swift in Sources */,
+				B56623D2247FB3A400B7F2DD /* Validation.swift in Sources */,
 				B5CE8071247E3E7F001F1205 /* ConstraintConfig.swift in Sources */,
 				B53E1AC1247CE83C004BBED2 /* AccountCell.swift in Sources */,
+				B56623E4247FB60A00B7F2DD /* HttpClient.swift in Sources */,
 				B5CE807B247E3E7F001F1205 /* ConstraintRelation.swift in Sources */,
+				B56623D3247FB3A400B7F2DD /* Notifications.swift in Sources */,
 				B53E1AAA247CB601004BBED2 /* BaseViewController.swift in Sources */,
-				B5CE80A7247E4038001F1205 /* ServerTrustPolicy.swift in Sources */,
 				B53E1ABA247CC623004BBED2 /* SubscriptionsViewController.swift in Sources */,
 				B5CE8074247E3E7F001F1205 /* ConstraintLayoutGuide.swift in Sources */,
+				B56623D5247FB3A400B7F2DD /* Alamofire.swift in Sources */,
 				B5CE8070247E3E7F001F1205 /* ConstraintInsetTarget.swift in Sources */,
+				B56623CD247FB3A400B7F2DD /* Timeline.swift in Sources */,
 				B5CE80AC247E61DE001F1205 /* VedioDetailHeaderView.swift in Sources */,
+				B56623D4247FB3A400B7F2DD /* Response.swift in Sources */,
+				B56623CF247FB3A400B7F2DD /* Result.swift in Sources */,
 				B5CE8067247E3E7F001F1205 /* ConstraintMakerPriortizable.swift in Sources */,
+				B56623DA247FB3A400B7F2DD /* SessionDelegate.swift in Sources */,
 				B5CE8068247E3E7F001F1205 /* ConstraintAttributes.swift in Sources */,
 				B5CE806B247E3E7F001F1205 /* ConstraintInsets.swift in Sources */,
-				B5CE809B247E4038001F1205 /* Timeline.swift in Sources */,
 				B5CE80CE247F8F20001F1205 /* ESTabBarItemContentView.swift in Sources */,
 				B5CE80CF247F8F20001F1205 /* ESTabBarItem.swift in Sources */,
 				B5CE8083247E3E7F001F1205 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
 				B53E1AB9247CC623004BBED2 /* HomeViewController.swift in Sources */,
-				B5CE809E247E4038001F1205 /* ParameterEncoding.swift in Sources */,
 				B5CE8081247E3E7F001F1205 /* ConstraintRelatableTarget.swift in Sources */,
-				B5CE80A1247E4038001F1205 /* Notifications.swift in Sources */,
+				B56623CE247FB3A400B7F2DD /* DispatchQueue+Alamofire.swift in Sources */,
 				B58A522D247FA5960072F589 /* BouncesContentView.swift in Sources */,
 				B5CE80D1247F8F20001F1205 /* ESTabBar.swift in Sources */,
 				B53E1A3E2473BAAD004BBED2 /* AppDelegate.swift in Sources */,
@@ -708,13 +726,15 @@
 				B53E1AC6247D14C6004BBED2 /* AccountVedioInfoCell.swift in Sources */,
 				B5CE8076247E3E7F001F1205 /* Typealiases.swift in Sources */,
 				B58A522C247FA5960072F589 /* BasicContentView.swift in Sources */,
+				B56623CB247FB3A400B7F2DD /* MultipartFormData.swift in Sources */,
+				B56623D1247FB3A400B7F2DD /* AFError.swift in Sources */,
 				B5CE7FBE247E1589001F1205 /* SubscripHeaderView.swift in Sources */,
 				B5CE80CD247F8F20001F1205 /* ESTabBarController.swift in Sources */,
+				B56623CC247FB3A400B7F2DD /* NetworkReachabilityManager.swift in Sources */,
 				B5CE8072247E3E7F001F1205 /* UILayoutSupport+Extensions.swift in Sources */,
 				B56623B5247FA94100B7F2DD /* BaseNavigationController.swift in Sources */,
 				B5CE8066247E3E7F001F1205 /* ConstraintDescription.swift in Sources */,
-				B5CE80A0247E4038001F1205 /* Validation.swift in Sources */,
-				B5CE8098247E4038001F1205 /* TaskDelegate.swift in Sources */,
+				B56623E0247FB5EA00B7F2DD /* YTBManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -899,7 +919,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "YouTube/YouTube-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -919,7 +939,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.turbo.YouTube;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "YouTube/YouTube-Bridging-Header.h";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

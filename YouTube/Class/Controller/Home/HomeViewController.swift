@@ -67,7 +67,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return MainScreenWidth*0.6 + 70
+        return MainScreenWidth * 0.6 + 70
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -79,6 +79,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         let detail = VedioDetailController()
         detail.vedioData = data
+        detail.hidesBottomBarWhenPushed = true
         self.navigationController?.pushViewController(detail, animated: true)
     }
 }
