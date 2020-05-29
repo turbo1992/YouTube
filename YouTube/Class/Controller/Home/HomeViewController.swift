@@ -26,9 +26,10 @@ class HomeViewController: BaseViewController {
         setupTableView()
     }
     
-    private lazy var leftBarView: UIView = {
-        return UIView(frame: CGRect(x: 0, y: 0, width: 88, height: 44))
-    }()
+    @objc func refreshData() {
+        self.tableview!.mj_header.endRefreshing()
+        self.tableview!.mj_footer.endRefreshing()
+    }
     
     private func setupTableView() {
         tableview = UITableView(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: MainScreenHeight - NavBarHeight - TabBarHeight), style: UITableView.Style.grouped)
@@ -41,6 +42,16 @@ class HomeViewController: BaseViewController {
         view.addSubview(tableview!)
         let headerView = UIView.init(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: 0.1))
         tableview?.tableHeaderView = headerView
+        
+        // 下拉刷新
+        let header = MJRefreshNormalHeader()
+        header.setRefreshingTarget(self, refreshingAction: #selector(self.refreshData))
+        self.tableview!.mj_header = header
+        
+        // 上拉刷新
+        let footer = MJRefreshAutoNormalFooter()
+        footer.setRefreshingTarget(self, refreshingAction: #selector(self.refreshData))
+        self.tableview!.mj_footer = footer
     }
     
 }

@@ -27,6 +27,10 @@ class TrendingViewController: BaseViewController {
         getArticleList()
     }
     
+    @objc func refreshData() {
+        getArticleList()
+    }
+    
     func getArticleList() {
         let urlStr = baseUrl + "/v1/public/articleList"
         request(urlStr).responseJSON { (response) in
@@ -40,6 +44,8 @@ class TrendingViewController: BaseViewController {
                     self.articleList?.add(article)
                 }
                 self.tableview!.reloadData()
+                self.tableview!.mj_header.endRefreshing()
+                self.tableview!.mj_footer.endRefreshing()
                 print(json)
                 break
             case .failure(let error):
@@ -60,6 +66,16 @@ class TrendingViewController: BaseViewController {
         view.addSubview(tableview!)
         let headerView = UIView.init(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: 0.1))
         tableview?.tableHeaderView = headerView
+        
+        // 下拉刷新
+        let header = MJRefreshNormalHeader()
+        header.setRefreshingTarget(self, refreshingAction: #selector(self.refreshData))
+        self.tableview!.mj_header = header
+        
+        // 上拉刷新
+        let footer = MJRefreshAutoNormalFooter()
+        footer.setRefreshingTarget(self, refreshingAction: #selector(self.refreshData))
+        self.tableview!.mj_footer = footer
     }
     
 }
