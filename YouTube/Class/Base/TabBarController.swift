@@ -32,10 +32,10 @@ class TabBarController: ESTabBarController {
         let nav3 = BaseNavigationController(rootViewController: v3)
         let nav4 = BaseNavigationController(rootViewController: v4)
         
-        nav1.tabBarItem = ESTabBarItem.init(BouncesContentView(), title: "Home", image: UIImage(named: "es-home"), selectedImage: UIImage(named: "es-home-1"))
-        nav2.tabBarItem = ESTabBarItem.init(BouncesContentView(), title: "Trending", image: UIImage(named: "es-find"), selectedImage: UIImage(named: "es-find-1"))
-        nav3.tabBarItem = ESTabBarItem.init(BouncesContentView(), title: "Vedios", image: UIImage(named: "es-cardboard"), selectedImage: UIImage(named: "es-cardboard-1"))
-        nav4.tabBarItem = ESTabBarItem.init(BouncesContentView(), title: "Account", image: UIImage(named: "es-me"), selectedImage: UIImage(named: "es-me-1"))
+        nav1.tabBarItem = ESTabBarItem.init(BouncesContentView(), title: nil, image: UIImage(named: "es-home"), selectedImage: UIImage(named: "es-home-1"))
+        nav2.tabBarItem = ESTabBarItem.init(BouncesContentView(), title: nil, image: UIImage(named: "es-find"), selectedImage: UIImage(named: "es-find-1"))
+        nav3.tabBarItem = ESTabBarItem.init(BouncesContentView(), title: nil, image: UIImage(named: "es-cardboard"), selectedImage: UIImage(named: "es-cardboard-1"))
+        nav4.tabBarItem = ESTabBarItem.init(BouncesContentView(), title: nil, image: UIImage(named: "es-me"), selectedImage: UIImage(named: "es-me-1"))
         
         self.tabBar.shadowImage = nil
 
