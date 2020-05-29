@@ -56,6 +56,8 @@ class VedioDetailController: BaseViewController {
         tableview?.sectionFooterHeight = 0
         view.addSubview(tableview!)
         tableview?.tableHeaderView = createHeaderView()
+        let footerView = UIView.init(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: 0.1))
+        tableview?.tableFooterView = footerView
     }
     
     private func createHeaderView() ->VedioDetailHeaderView {

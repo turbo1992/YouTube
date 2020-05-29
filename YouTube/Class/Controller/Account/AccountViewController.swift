@@ -37,6 +37,8 @@ class AccountViewController: BaseViewController {
         view.addSubview(tableview!)
         view.backgroundColor = RGBA(r: 1, g: 1, b: 1, a: 1)
         tableview?.tableHeaderView = AccountHeaderView(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: 120))
+        let footerView = UIView.init(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: 0.1))
+        tableview?.tableFooterView = footerView
     }
     
 }

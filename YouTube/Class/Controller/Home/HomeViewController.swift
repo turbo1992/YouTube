@@ -42,6 +42,8 @@ class HomeViewController: BaseViewController {
         view.addSubview(tableview!)
         let headerView = UIView.init(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: 0.1))
         tableview?.tableHeaderView = headerView
+        let footerView = UIView.init(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: 0.1))
+        tableview?.tableFooterView = footerView
         
         // 下拉刷新
         let header = MJRefreshNormalHeader()

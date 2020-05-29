@@ -41,6 +41,8 @@ class SubscriptionsViewController: BaseViewController {
         tableview?.sectionFooterHeight = 0
         view.addSubview(tableview!)
         tableview?.tableHeaderView = SubscripHeaderView(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: 90))
+        let footerView = UIView.init(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: 0.1))
+        tableview?.tableFooterView = footerView
         
         // 下拉刷新
         let header = MJRefreshNormalHeader()
