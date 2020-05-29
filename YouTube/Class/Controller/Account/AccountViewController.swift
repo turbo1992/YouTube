@@ -8,9 +8,6 @@
 
 import UIKit
 
-private let cellReuseIdentifier1 = "AccountCell"
-private let cellReuseIdentifier2 = "AccountVedioInfoCell"
-
 class AccountViewController: BaseViewController {
     
     let menuTitles = ["History", "My Videos", "Notifications", "Watch Later"]
@@ -29,11 +26,11 @@ class AccountViewController: BaseViewController {
     }
     
     private func setupTableView(){
-        tableview = UITableView(frame: view.bounds, style: UITableView.Style.grouped)
+        tableview = UITableView(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: MainScreenHeight - NavBarHeight - TabBarHeight), style: UITableView.Style.grouped)
         tableview?.delegate = self
         tableview?.dataSource = self
-        tableview?.register(AccountCell.self, forCellReuseIdentifier: cellReuseIdentifier1)
-        tableview?.register(AccountVedioInfoCell.self, forCellReuseIdentifier: cellReuseIdentifier2)
+        tableview?.register(AccountCell.self, forCellReuseIdentifier: "AccountCell")
+        tableview?.register(AccountVedioInfoCell.self, forCellReuseIdentifier: "AccountVedioInfoCell")
         tableview?.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableview?.sectionHeaderHeight = 0
         tableview?.sectionFooterHeight = 0
@@ -48,12 +45,12 @@ extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch indexPath.section {
         case 0:
-            let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier1, for:indexPath) as! AccountCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AccountCell", for:indexPath) as! AccountCell
             cell.leftImageView.image = UIImage(named: menuTitles[indexPath.row])
             cell.titleLabel.text = menuTitles[indexPath.row]
             return cell
         default:
-            let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier2, for:indexPath) as! AccountVedioInfoCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AccountVedioInfoCell", for:indexPath) as! AccountVedioInfoCell
             cell.leftImageView.image = UIImage(named: vedioImages[indexPath.row])
             cell.titleLabel.text = vedioTitles[indexPath.row]
             return cell
@@ -86,9 +83,7 @@ extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let detail = VedioDetailController()
-//        detail.vedioId = "126"
-//        self.navigationController?.pushViewController(detail, animated: true)
+
     }
 }
 

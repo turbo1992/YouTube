@@ -47,7 +47,7 @@ class VedioDetailController: BaseViewController {
     }()
     
     private func setupTableView(){
-        tableview = UITableView(frame: view.bounds, style: UITableView.Style.grouped)
+        tableview = UITableView(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: MainScreenHeight - NavBarHeight), style: UITableView.Style.grouped)
         tableview?.delegate = self
         tableview?.dataSource = self
         tableview?.register(RecomandVedioCell.self, forCellReuseIdentifier: "RecomandVedioCell")

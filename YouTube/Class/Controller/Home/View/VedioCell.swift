@@ -70,7 +70,7 @@ class VedioCell: UITableViewCell {
         
         botLine.snp.makeConstraints { (make) in
             make.left.equalToSuperview()
-            make.bottom.equalToSuperview()
+            make.bottom.equalToSuperview().offset(0.5)
             make.width.equalToSuperview()
             make.height.equalTo(1.0)
         }

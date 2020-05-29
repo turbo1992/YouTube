@@ -8,8 +8,6 @@
 
 import UIKit
 
-private let cellReuseIdentifier = "VedioCell"
-
 class HomeViewController: BaseViewController {
     
     let menuTitles = ["What Does Jared Kushner Believe?", "hqdefault-2", "Whoner & losers", "hqdefault-1", "Cnn:the age channage", "hqdefault-6", "What Does Jared Kushner Believe?", "hqdefault-2", "Whoner & losers", "hqdefault-1", "Cnn:the age channage", "hqdefault-6"]
@@ -32,11 +30,11 @@ class HomeViewController: BaseViewController {
         return UIView(frame: CGRect(x: 0, y: 0, width: 88, height: 44))
     }()
     
-    private func setupTableView(){
-        tableview = UITableView(frame: view.bounds, style: UITableView.Style.grouped)
+    private func setupTableView() {
+        tableview = UITableView(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: MainScreenHeight - NavBarHeight - TabBarHeight), style: UITableView.Style.grouped)
         tableview?.delegate = self
         tableview?.dataSource = self
-        tableview?.register(VedioCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+        tableview?.register(VedioCell.self, forCellReuseIdentifier: "VedioCell")
         tableview?.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableview?.sectionHeaderHeight = 0
         tableview?.sectionFooterHeight = 0
@@ -49,7 +47,7 @@ class HomeViewController: BaseViewController {
 
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for:indexPath) as! VedioCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "VedioCell", for:indexPath) as! VedioCell
         cell.vedioImageView.image = UIImage(named: menuTitles[indexPath.row])
         cell.logoImageView.image = UIImage(named: logoImages[indexPath.row])
         cell.titleLabel.text = menuTitles[indexPath.row]

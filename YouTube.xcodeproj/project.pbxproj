@@ -48,6 +48,9 @@
 		B56623E0247FB5EA00B7F2DD /* YTBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623DF247FB5EA00B7F2DD /* YTBManager.swift */; };
 		B56623E2247FB5F900B7F2DD /* ModelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623E1247FB5F900B7F2DD /* ModelManager.swift */; };
 		B56623E4247FB60A00B7F2DD /* HttpClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623E3247FB60A00B7F2DD /* HttpClient.swift */; };
+		B56623E82480A96400B7F2DD /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623E72480A96400B7F2DD /* Util.swift */; };
+		B56623EA2480F64F00B7F2DD /* YTCDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623E92480F64F00B7F2DD /* YTCDefine.swift */; };
+		B56623EC2480FCA300B7F2DD /* ArticleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623EB2480FCA300B7F2DD /* ArticleData.swift */; };
 		B58A522C247FA5960072F589 /* BasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58A522A247FA5960072F589 /* BasicContentView.swift */; };
 		B58A522D247FA5960072F589 /* BouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58A522B247FA5960072F589 /* BouncesContentView.swift */; };
 		B5CE7FBE247E1589001F1205 /* SubscripHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE7FBD247E1589001F1205 /* SubscripHeaderView.swift */; };
@@ -163,6 +166,9 @@
 		B56623DF247FB5EA00B7F2DD /* YTBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTBManager.swift; sourceTree = "<group>"; };
 		B56623E1247FB5F900B7F2DD /* ModelManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelManager.swift; sourceTree = "<group>"; };
 		B56623E3247FB60A00B7F2DD /* HttpClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClient.swift; sourceTree = "<group>"; };
+		B56623E72480A96400B7F2DD /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		B56623E92480F64F00B7F2DD /* YTCDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YTCDefine.swift; sourceTree = "<group>"; };
+		B56623EB2480FCA300B7F2DD /* ArticleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleData.swift; sourceTree = "<group>"; };
 		B58A522A247FA5960072F589 /* BasicContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicContentView.swift; sourceTree = "<group>"; };
 		B58A522B247FA5960072F589 /* BouncesContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BouncesContentView.swift; sourceTree = "<group>"; };
 		B5CE7FBD247E1589001F1205 /* SubscripHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscripHeaderView.swift; sourceTree = "<group>"; };
@@ -320,7 +326,9 @@
 		B53E1A742473BAE7004BBED2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B56623E72480A96400B7F2DD /* Util.swift */,
 				B53E1AAB247CBB35004BBED2 /* Common.swift */,
+				B56623E92480F64F00B7F2DD /* YTCDefine.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -386,6 +394,7 @@
 			children = (
 				B53E1AC3247CF827004BBED2 /* AccountInfo.swift */,
 				B5CE80AD247E63B3001F1205 /* VedioData.swift */,
+				B56623EB2480FCA300B7F2DD /* ArticleData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -703,11 +712,13 @@
 				B53E1AAA247CB601004BBED2 /* BaseViewController.swift in Sources */,
 				B53E1ABA247CC623004BBED2 /* SubscriptionsViewController.swift in Sources */,
 				B5CE8074247E3E7F001F1205 /* ConstraintLayoutGuide.swift in Sources */,
+				B56623EC2480FCA300B7F2DD /* ArticleData.swift in Sources */,
 				B56623D5247FB3A400B7F2DD /* Alamofire.swift in Sources */,
 				B5CE8070247E3E7F001F1205 /* ConstraintInsetTarget.swift in Sources */,
 				B56623CD247FB3A400B7F2DD /* Timeline.swift in Sources */,
 				B5CE80AC247E61DE001F1205 /* VedioDetailHeaderView.swift in Sources */,
 				B56623D4247FB3A400B7F2DD /* Response.swift in Sources */,
+				B56623E82480A96400B7F2DD /* Util.swift in Sources */,
 				B56623CF247FB3A400B7F2DD /* Result.swift in Sources */,
 				B5CE8067247E3E7F001F1205 /* ConstraintMakerPriortizable.swift in Sources */,
 				B56623DA247FB3A400B7F2DD /* SessionDelegate.swift in Sources */,
@@ -725,6 +736,7 @@
 				B53E1AAC247CBB35004BBED2 /* Common.swift in Sources */,
 				B53E1AC6247D14C6004BBED2 /* AccountVedioInfoCell.swift in Sources */,
 				B5CE8076247E3E7F001F1205 /* Typealiases.swift in Sources */,
+				B56623EA2480F64F00B7F2DD /* YTCDefine.swift in Sources */,
 				B58A522C247FA5960072F589 /* BasicContentView.swift in Sources */,
 				B56623CB247FB3A400B7F2DD /* MultipartFormData.swift in Sources */,
 				B56623D1247FB3A400B7F2DD /* AFError.swift in Sources */,

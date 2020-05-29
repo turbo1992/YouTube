@@ -9,5 +9,15 @@
 import UIKit
 
 class YTBManager: NSObject {
-
+    static let shared = YTBManager()
+    
+    var httpClient: HttpClient!
+    var vedioPlayState: Int!
+    
+    private override init() {
+        super.init()
+        self.httpClient = HttpClient()
+        self.vedioPlayState = VedioPlayState.closed.rawValue
+        print("YouTube manager initilized")
+    }
 }

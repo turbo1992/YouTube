@@ -8,8 +8,6 @@
 
 import UIKit
 
-private let cellReuseIdentifier = "VedioCell"
-
 class SubscriptionsViewController: BaseViewController {
     
     let menuTitles = ["hqdefault-1", "Whoner & losers", "What Does Jared Kushner Believe?", "hqdefault-2", "Cnn:the age channage", "hqdefault-6"]
@@ -33,10 +31,10 @@ class SubscriptionsViewController: BaseViewController {
     }()
     
     private func setupTableView(){
-        tableview = UITableView(frame: view.bounds, style: UITableView.Style.grouped)
+        tableview = UITableView(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: MainScreenHeight - NavBarHeight - TabBarHeight), style: UITableView.Style.grouped)
         tableview?.delegate = self
         tableview?.dataSource = self
-        tableview?.register(VedioCell.self, forCellReuseIdentifier: cellReuseIdentifier)
+        tableview?.register(VedioCell.self, forCellReuseIdentifier: "VedioCell")
         tableview?.separatorStyle = UITableViewCell.SeparatorStyle.none
         tableview?.sectionHeaderHeight = 0
         tableview?.sectionFooterHeight = 0
@@ -48,7 +46,7 @@ class SubscriptionsViewController: BaseViewController {
 
 extension SubscriptionsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier, for:indexPath) as! VedioCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "VedioCell", for:indexPath) as! VedioCell
         cell.vedioImageView.image = UIImage(named: menuTitles[indexPath.row])
         cell.logoImageView.image = UIImage(named: logoImages[indexPath.row])
         cell.titleLabel.text = menuTitles[indexPath.row]

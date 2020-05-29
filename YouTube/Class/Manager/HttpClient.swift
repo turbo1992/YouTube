@@ -13,7 +13,7 @@ typealias ResponseBlock = (_ res: Any)->()
 class HttpClient: NSObject {
     
     func getArticleList() {
-        let urlStr = "http://112.74.55.99/api/v1/public/articleList"
+        let urlStr = baseUrl + "/v1/public/articleList"
         request(urlStr).responseJSON { (response) in
             switch response.result {
             case .success(let json):

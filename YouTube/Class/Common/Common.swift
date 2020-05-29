@@ -28,11 +28,11 @@ let kAppTabbarUnselColor = UIColor(red: 91/255.0, green: 14.0/255.0, blue: 13.0/
 let MainScreenWidth = UIScreen.main.bounds.width
 let MainScreenHeight = UIScreen.main.bounds.height
 
-func RGB(r:CGFloat, g:CGFloat, b:CGFloat) -> UIColor {
-    return UIColor(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: 1.0)
-}
 
-func RGBA(r:CGFloat, g:CGFloat, b:CGFloat, a:CGFloat) -> UIColor {
-    return UIColor(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: a)
-}
+let isIphoneX = MainScreenHeight >= 812 ? true : false
+
+let NavBarHeight : CGFloat = isIphoneX ? 88 : 64
+let TabBarHeight : CGFloat = isIphoneX ? 49 + 34 : 49
+
+
 
