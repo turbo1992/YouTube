@@ -16,7 +16,7 @@ class TrendingViewController: BaseViewController {
     
     let menuTitles = ["hqdefault", "hqdefault-6", "What Does Jared Kushner Believe?", "hqdefault-6", "hqdefault-1", "Cnn:the age channage"]
     
-    var articleList: [ArticleInfo]?
+    var articleList: [ArticleInfo]!
     var tableview : UITableView?
     
     override func viewDidLoad() {
@@ -45,12 +45,12 @@ class TrendingViewController: BaseViewController {
                 if (articleModel?.code == Retcode.SUCCESS.rawValue) {
                     self.articleList = articleModel?.data?.list
                 } else {
-                    self.showDetailHint(hint: REQUEST_FAILED)
+                    self.showDetailHint(hint: Tip.REQUEST_FAILED.rawValue)
                 }
                 self.reloadTable()
                 break
             case .failure(let error):
-                self.showDetailHint(hint: REQUEST_FAILED)
+                self.showDetailHint(hint: Tip.REQUEST_FAILED.rawValue)
                 self.reloadTable()
                 print("error:\(error)")
                 break
@@ -96,7 +96,7 @@ extension TrendingViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.articleList == nil ? 0 : self.articleList?.count as! Int
+        return self.articleList == nil ? 0 : self.articleList!.count
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

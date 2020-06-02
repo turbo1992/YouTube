@@ -1,8 +1,8 @@
 //
-//  Common.swift
+//  YTBDefine.swift
 //  YouTube
 //
-//  Created by Turbo on 2020/5/26.
+//  Created by Turbo on 2020/5/29.
 //  Copyright © 2020 turbo. All rights reserved.
 //
 
@@ -11,6 +11,10 @@ import Kingfisher
 import SnapKit
 import SwiftyJSON
 import Alamofire
+
+let baseUrl = "http://112.74.55.99/api"
+
+let fileService = baseUrl + "/v1/public/download?url="
 
 let kAppMainColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
 
@@ -37,6 +41,3 @@ let isIphoneX = MainScreenHeight >= 812 ? true : false
 
 let NavBarHeight : CGFloat = isIphoneX ? 88 : 64
 let TabBarHeight : CGFloat = isIphoneX ? 49 + 34 : 49
-
-
-
