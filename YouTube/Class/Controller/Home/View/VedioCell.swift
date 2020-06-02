@@ -33,7 +33,7 @@ class VedioCell: UITableViewCell {
         UtilImage(imageView: vedioImageView, url: imageUrl, placeholder: "placeholder")
         UtilImage(imageView: logoImageView, url: imageUrl, placeholder: "placeholder")
         titleLabel.text = article.title
-        descriptionLabel.text = article.create_time
+        descriptionLabel.text = TimeFormat(value: article.create_time)
         timeLabel.text = "01:02"
     }
     
