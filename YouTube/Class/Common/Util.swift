@@ -15,3 +15,7 @@ func RGB(r:CGFloat, g:CGFloat, b:CGFloat) -> UIColor {
 func RGBA(r:CGFloat, g:CGFloat, b:CGFloat, a:CGFloat) -> UIColor {
     return UIColor(red: r / 255.0, green: g / 255.0, blue: b / 255.0, alpha: a)
 }
+
+func UtilImage(imageView: UIImageView, url: String, placeholder: String) {
+    imageView.kf.setImage(with: URL(string: url), placeholder: UIImage(named: placeholder), options: nil, progressBlock: nil, completionHandler: nil)
+}

@@ -38,6 +38,9 @@
 		B56623EC2480FCA300B7F2DD /* ArticleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B56623EB2480FCA300B7F2DD /* ArticleData.swift */; };
 		B58A522C247FA5960072F589 /* BasicContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58A522A247FA5960072F589 /* BasicContentView.swift */; };
 		B58A522D247FA5960072F589 /* BouncesContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58A522B247FA5960072F589 /* BouncesContentView.swift */; };
+		B5AD5DBF2486252800FF1B67 /* HostReach.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD5DBE2486252800FF1B67 /* HostReach.swift */; };
+		B5AD5DC12486291600FF1B67 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5AD5DC02486291600FF1B67 /* SystemConfiguration.framework */; };
+		B5AD5DC52486347A00FF1B67 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD5DC42486347A00FF1B67 /* ArticleModel.swift */; };
 		B5CE7FBE247E1589001F1205 /* SubscripHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE7FBD247E1589001F1205 /* SubscripHeaderView.swift */; };
 		B5CE80AC247E61DE001F1205 /* VedioDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE80AB247E61DE001F1205 /* VedioDetailHeaderView.swift */; };
 		B5CE80AE247E63B3001F1205 /* VedioData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE80AD247E63B3001F1205 /* VedioData.swift */; };
@@ -113,6 +116,9 @@
 		B56623EB2480FCA300B7F2DD /* ArticleData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleData.swift; sourceTree = "<group>"; };
 		B58A522A247FA5960072F589 /* BasicContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicContentView.swift; sourceTree = "<group>"; };
 		B58A522B247FA5960072F589 /* BouncesContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BouncesContentView.swift; sourceTree = "<group>"; };
+		B5AD5DBE2486252800FF1B67 /* HostReach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostReach.swift; sourceTree = "<group>"; };
+		B5AD5DC02486291600FF1B67 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		B5AD5DC42486347A00FF1B67 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		B5CE7FBD247E1589001F1205 /* SubscripHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscripHeaderView.swift; sourceTree = "<group>"; };
 		B5CE80AB247E61DE001F1205 /* VedioDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VedioDetailHeaderView.swift; sourceTree = "<group>"; };
 		B5CE80AD247E63B3001F1205 /* VedioData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VedioData.swift; sourceTree = "<group>"; };
@@ -133,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5AD5DC12486291600FF1B67 /* SystemConfiguration.framework in Frameworks */,
 				B6D531887AB32232C9056337 /* Pods_YouTube.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -172,6 +179,7 @@
 		9E9931F8CC15098F63B727E6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B5AD5DC02486291600FF1B67 /* SystemConfiguration.framework */,
 				DE1232EE24234FC29824D6AF /* Pods_YouTube.framework */,
 				3394E72C6A2C621EEF94A93C /* Pods_YouTubeTests.framework */,
 				6AD8A0BFCA7FD7453909A399 /* Pods_YouTubeUITests.framework */,
@@ -330,6 +338,7 @@
 				B53E1AC3247CF827004BBED2 /* AccountInfo.swift */,
 				B5CE80AD247E63B3001F1205 /* VedioData.swift */,
 				B56623EB2480FCA300B7F2DD /* ArticleData.swift */,
+				B5AD5DC42486347A00FF1B67 /* ArticleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -350,6 +359,7 @@
 				B56623DF247FB5EA00B7F2DD /* YTBManager.swift */,
 				B56623E3247FB60A00B7F2DD /* HttpClient.swift */,
 				B56623E1247FB5F900B7F2DD /* ModelManager.swift */,
+				B5AD5DBE2486252800FF1B67 /* HostReach.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -612,6 +622,7 @@
 				B53E1AC4247CF827004BBED2 /* AccountInfo.swift in Sources */,
 				B5CE80D0247F8F20001F1205 /* ESTabBarItemBadgeView.swift in Sources */,
 				B5CE80B0247E65ED001F1205 /* RecomandVedioCell.swift in Sources */,
+				B5AD5DC52486347A00FF1B67 /* ArticleModel.swift in Sources */,
 				B53E1ABC247CC623004BBED2 /* AccountViewController.swift in Sources */,
 				B53E1ABB247CC623004BBED2 /* TrendingViewController.swift in Sources */,
 				B53E1ACB247D2DC0004BBED2 /* VedioDetailController.swift in Sources */,
@@ -619,6 +630,7 @@
 				B5CE80CC247F8F20001F1205 /* ESTabBarItemMoreContentView.swift in Sources */,
 				B5CE80AE247E63B3001F1205 /* VedioData.swift in Sources */,
 				B53E1ABF247CC764004BBED2 /* AccountHeaderView.swift in Sources */,
+				B5AD5DBF2486252800FF1B67 /* HostReach.swift in Sources */,
 				B5CE80D2247F8F20001F1205 /* ESTabBarItemContainer.swift in Sources */,
 				B56623E2247FB5F900B7F2DD /* ModelManager.swift in Sources */,
 				B53E1AC9247D2450004BBED2 /* VedioCell.swift in Sources */,

@@ -13,11 +13,17 @@ pod 'Alamofire'
 
 pod 'Kingfisher'
 
+pod 'HandyJSON'
+
 pod 'SwiftyJSON'
 
 pod 'MJRefresh'
 
 pod 'MBProgressHUD'
+
+pod 'ReachabilitySwift'
+
+pod 'Moya'
 
   target 'YouTubeTests' do
     inherit! :search_paths

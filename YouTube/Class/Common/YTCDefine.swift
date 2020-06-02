@@ -10,6 +10,8 @@ import UIKit
 
 let baseUrl = "http://112.74.55.99/api"
 
+let fileService = baseUrl + "/v1/public/download?url="
+
 enum UserType:Int {
     case admin = 0
     case shop = 1

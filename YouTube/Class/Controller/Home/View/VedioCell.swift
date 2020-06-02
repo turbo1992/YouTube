@@ -28,6 +28,15 @@ class VedioCell: UITableViewCell {
         createCellUI()
     }
     
+    func setArticle(article: ArticleInfo) {
+        let imageUrl = fileService + article.image_url!
+        UtilImage(imageView: vedioImageView, url: imageUrl, placeholder: "placeholder")
+        UtilImage(imageView: logoImageView, url: imageUrl, placeholder: "placeholder")
+        titleLabel.text = article.title
+        descriptionLabel.text = article.create_time
+        timeLabel.text = "01:02"
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         setupUIFrame()

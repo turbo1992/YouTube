@@ -10,12 +10,13 @@ import UIKit
 import Alamofire
 import MJRefresh
 import SwiftyJSON
+import HandyJSON
 
 class TrendingViewController: BaseViewController {
     
     let menuTitles = ["hqdefault", "hqdefault-6", "What Does Jared Kushner Believe?", "hqdefault-6", "hqdefault-1", "Cnn:the age channage"]
     
-    var articleList: NSMutableArray?
+    var articleList: [ArticleInfo]?
     var tableview : UITableView?
     
     override func viewDidLoad() {
@@ -24,7 +25,6 @@ class TrendingViewController: BaseViewController {
     }
     
     private func setupUI(){
-        articleList = NSMutableArray()
         
         setupTableView()
         getArticleList()
@@ -38,30 +38,14 @@ class TrendingViewController: BaseViewController {
         let urlStr = baseUrl + "/v1/public/articleList"
         request(urlStr).responseJSON { (response) in
             switch response.result {
-            case .success(let json):
+            case .success(let data):
                 
-                let res = JSON(json)
+                let json = JSON(data)
+                let articleModel = JSONDeserializer<ArticleModel>.deserializeFrom(json: json.description)
+                self.articleList = articleModel?.data?.list
                 
-                for idx in 0...4 {
-                    let article = ArticleData()
-                    article.title = self.menuTitles[idx]
-                    article.coverImgUrl = self.menuTitles[idx]
-                    article.authUrl = "channel" + String(idx)
-                    self.articleList?.add(article)
-                }
-                
-                print(res)
-                print(json)
-                
-                // 上拉刷新
-                let footer = MJRefreshAutoNormalFooter()
-                footer.setRefreshingTarget(self, refreshingAction: #selector(self.refreshData))
-                self.tableview!.mj_footer = footer
-                
-                self.tableview!.reloadData()
                 self.tableview!.mj_header!.endRefreshing()
-                self.tableview!.mj_footer!.endRefreshing()
-                
+                self.tableview!.reloadData()
                 break
             case .failure(let error):
                 print("error:\(error)")
@@ -95,17 +79,15 @@ class TrendingViewController: BaseViewController {
 extension TrendingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VedioCell", for:indexPath) as! VedioCell
-        let article = self.articleList![indexPath.row] as! ArticleData
-        cell.vedioImageView.image = UIImage(named: article.coverImgUrl)
-        cell.logoImageView.image = UIImage(named: article.authUrl)
-        cell.titleLabel.text = article.title
-        cell.descriptionLabel.text = "2020/05/29"
-        cell.timeLabel.text = "01:02"
+        if (self.articleList != nil) {
+            let article = self.articleList![indexPath.row]
+            cell.setArticle(article: article)
+        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.articleList!.count
+        return self.articleList == nil ? 0 : self.articleList?.count as! Int
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

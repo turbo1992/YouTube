@@ -16,8 +16,11 @@ class YTBManager: NSObject {
     
     private override init() {
         super.init()
+        print("YouTube manager initilized")
+
         self.httpClient = HttpClient()
         self.vedioPlayState = VedioPlayState.closed.rawValue
-        print("YouTube manager initilized")
+        
+        HostReach().reachabilityForInternetConnection()
     }
 }
