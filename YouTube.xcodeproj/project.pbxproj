@@ -41,6 +41,7 @@
 		B5AD5DBF2486252800FF1B67 /* HostReach.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD5DBE2486252800FF1B67 /* HostReach.swift */; };
 		B5AD5DC12486291600FF1B67 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5AD5DC02486291600FF1B67 /* SystemConfiguration.framework */; };
 		B5AD5DC52486347A00FF1B67 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD5DC42486347A00FF1B67 /* ArticleModel.swift */; };
+		B5AD5DC724864F5000FF1B67 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AD5DC624864F5000FF1B67 /* Constant.swift */; };
 		B5CE7FBE247E1589001F1205 /* SubscripHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE7FBD247E1589001F1205 /* SubscripHeaderView.swift */; };
 		B5CE80AC247E61DE001F1205 /* VedioDetailHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE80AB247E61DE001F1205 /* VedioDetailHeaderView.swift */; };
 		B5CE80AE247E63B3001F1205 /* VedioData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5CE80AD247E63B3001F1205 /* VedioData.swift */; };
@@ -119,6 +120,7 @@
 		B5AD5DBE2486252800FF1B67 /* HostReach.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostReach.swift; sourceTree = "<group>"; };
 		B5AD5DC02486291600FF1B67 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		B5AD5DC42486347A00FF1B67 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
+		B5AD5DC624864F5000FF1B67 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		B5CE7FBD247E1589001F1205 /* SubscripHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscripHeaderView.swift; sourceTree = "<group>"; };
 		B5CE80AB247E61DE001F1205 /* VedioDetailHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VedioDetailHeaderView.swift; sourceTree = "<group>"; };
 		B5CE80AD247E63B3001F1205 /* VedioData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VedioData.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 			children = (
 				B56623E72480A96400B7F2DD /* Util.swift */,
 				B53E1AAB247CBB35004BBED2 /* Common.swift */,
+				B5AD5DC624864F5000FF1B67 /* Constant.swift */,
 				B56623E92480F64F00B7F2DD /* YTCDefine.swift */,
 			);
 			path = Common;
@@ -645,6 +648,7 @@
 				B5CE80CF247F8F20001F1205 /* ESTabBarItem.swift in Sources */,
 				B53E1AB9247CC623004BBED2 /* HomeViewController.swift in Sources */,
 				B58A522D247FA5960072F589 /* BouncesContentView.swift in Sources */,
+				B5AD5DC724864F5000FF1B67 /* Constant.swift in Sources */,
 				B5CE80D1247F8F20001F1205 /* ESTabBar.swift in Sources */,
 				B53E1A3E2473BAAD004BBED2 /* AppDelegate.swift in Sources */,
 				B53E1AAC247CBB35004BBED2 /* Common.swift in Sources */,

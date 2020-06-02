@@ -39,19 +39,28 @@ class TrendingViewController: BaseViewController {
         request(urlStr).responseJSON { (response) in
             switch response.result {
             case .success(let data):
-                
                 let json = JSON(data)
+                print(json)
                 let articleModel = JSONDeserializer<ArticleModel>.deserializeFrom(json: json.description)
-                self.articleList = articleModel?.data?.list
-                
-                self.tableview!.mj_header!.endRefreshing()
-                self.tableview!.reloadData()
+                if (articleModel?.code == Retcode.SUCCESS.rawValue) {
+                    self.articleList = articleModel?.data?.list
+                } else {
+                    self.showDetailHint(hint: REQUEST_FAILED)
+                }
+                self.reloadTable()
                 break
             case .failure(let error):
+                self.showDetailHint(hint: REQUEST_FAILED)
+                self.reloadTable()
                 print("error:\(error)")
                 break
             }
         }
+    }
+    
+    func reloadTable() {
+        self.tableview!.mj_header!.endRefreshing()
+        self.tableview!.reloadData()
     }
     
     private func setupTableView() {
