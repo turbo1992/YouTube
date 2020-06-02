@@ -36,7 +36,10 @@ class AccountViewController: BaseViewController {
         tableview?.sectionFooterHeight = 0
         view.addSubview(tableview!)
         view.backgroundColor = RGBA(r: 1, g: 1, b: 1, a: 1)
-        tableview?.tableHeaderView = AccountHeaderView(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: 120))
+        let header = AccountHeaderView(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: 120))
+        tableview?.tableHeaderView = header
+        let url = "http://img0.imgtn.bdimg.com/it/u=2366972591,890139901&fm=26&gp=0.jpg"
+        header.fillViewWithData(url: url)
         let footerView = UIView.init(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: 0.1))
         tableview?.tableFooterView = footerView
     }

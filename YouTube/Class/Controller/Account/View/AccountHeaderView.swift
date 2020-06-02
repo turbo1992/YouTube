@@ -31,10 +31,15 @@ class AccountHeaderView: UIView {
         addSubview(bgimageView)
         addSubview(logoImageView)
         addSubview(userNameLabel)
+        
     }
     
     private func setupUIFrame() {
         
+    }
+    
+    public func fillViewWithData(url: String) {
+        logoImageView.kf.setImage(with: URL(string: url))
     }
     
     // MARK: - 懒加载
@@ -45,7 +50,7 @@ class AccountHeaderView: UIView {
     }()
     
     lazy var logoImageView: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "channel4"))
+        let imageView = UIImageView()
         imageView.layer.cornerRadius = 25
         imageView.layer.masksToBounds = true
         imageView.frame = CGRect(x: 25, y: 30, width: 50, height: 50)

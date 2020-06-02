@@ -36,6 +36,9 @@ class TrendingViewController: BaseViewController {
         request(urlStr).responseJSON { (response) in
             switch response.result {
             case .success(let json):
+                
+                let res = JSON(json)
+                
                 for idx in 0...4 {
                     let article = ArticleData()
                     article.title = self.menuTitles[idx]
@@ -46,6 +49,7 @@ class TrendingViewController: BaseViewController {
                 self.tableview!.reloadData()
                 self.tableview!.mj_header.endRefreshing()
                 self.tableview!.mj_footer.endRefreshing()
+                print(res)
                 print(json)
                 break
             case .failure(let error):
