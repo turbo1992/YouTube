@@ -7,6 +7,10 @@
 //
 
 import UIKit
+import Kingfisher
+import SnapKit
+import SwiftyJSON
+import Alamofire
 
 let kAppMainColor = UIColor(red: 255.0/255.0, green: 255.0/255.0, blue: 255.0/255.0, alpha: 1.0)
 

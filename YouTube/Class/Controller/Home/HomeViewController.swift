@@ -26,11 +26,6 @@ class HomeViewController: BaseViewController {
         setupTableView()
     }
     
-    @objc func refreshData() {
-        self.tableview!.mj_header.endRefreshing()
-        self.tableview!.mj_footer.endRefreshing()
-    }
-    
     private func setupTableView() {
         tableview = UITableView(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: MainScreenHeight - NavBarHeight - TabBarHeight), style: UITableView.Style.grouped)
         tableview?.delegate = self
@@ -44,16 +39,6 @@ class HomeViewController: BaseViewController {
         tableview?.tableHeaderView = headerView
         let footerView = UIView.init(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: 0.1))
         tableview?.tableFooterView = footerView
-        
-        // 下拉刷新
-        let header = MJRefreshNormalHeader()
-        header.setRefreshingTarget(self, refreshingAction: #selector(self.refreshData))
-        self.tableview!.mj_header = header
-        
-        // 上拉刷新
-        let footer = MJRefreshAutoNormalFooter()
-        footer.setRefreshingTarget(self, refreshingAction: #selector(self.refreshData))
-        self.tableview!.mj_footer = footer
     }
     
 }

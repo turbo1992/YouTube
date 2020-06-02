@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Alamofire
+import MJRefresh
+import SwiftyJSON
 
 class TrendingViewController: BaseViewController {
     
@@ -46,11 +49,19 @@ class TrendingViewController: BaseViewController {
                     article.authUrl = "channel" + String(idx)
                     self.articleList?.add(article)
                 }
-                self.tableview!.reloadData()
-                self.tableview!.mj_header.endRefreshing()
-                self.tableview!.mj_footer.endRefreshing()
+                
                 print(res)
                 print(json)
+                
+                // 上拉刷新
+                let footer = MJRefreshAutoNormalFooter()
+                footer.setRefreshingTarget(self, refreshingAction: #selector(self.refreshData))
+                self.tableview!.mj_footer = footer
+                
+                self.tableview!.reloadData()
+                self.tableview!.mj_header!.endRefreshing()
+                self.tableview!.mj_footer!.endRefreshing()
+                
                 break
             case .failure(let error):
                 print("error:\(error)")
@@ -77,11 +88,6 @@ class TrendingViewController: BaseViewController {
         let header = MJRefreshNormalHeader()
         header.setRefreshingTarget(self, refreshingAction: #selector(self.refreshData))
         self.tableview!.mj_header = header
-        
-        // 上拉刷新
-        let footer = MJRefreshAutoNormalFooter()
-        footer.setRefreshingTarget(self, refreshingAction: #selector(self.refreshData))
-        self.tableview!.mj_footer = footer
     }
     
 }
