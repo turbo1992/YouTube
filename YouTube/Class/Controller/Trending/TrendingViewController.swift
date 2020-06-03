@@ -12,10 +12,11 @@ import MJRefresh
 import SwiftyJSON
 import HandyJSON
 
-class TrendingViewController: BaseViewController {
+class TrendingViewController: BaseViewController, TrendingBackDelegate {
     
     let menuTitles = ["hqdefault", "hqdefault-6", "What Does Jared Kushner Believe?", "hqdefault-6", "hqdefault-1", "Cnn:the age channage"]
     
+    var detail: TrendingDetailViewController!
     var articleList: [ArticleInfo]!
     var tableview : UITableView?
     
@@ -99,6 +100,21 @@ extension TrendingViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        detail = TrendingDetailViewController()
+        detail.delegate = self
+        detail.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(detail, animated: true)
+    }
+    
+    func trendingBack(res: String) {
+        print("delegate--->\(res)")
+        var article = self.articleList![0]
+        article.title = res
+        self.articleList.remove(at: 0)
+        self.articleList.append(article)
+        self.reloadTable()
+        detail.reLoadUI(color: UIColor.purple) { (msg) in
+            print("callback--->\(msg)")
+        }
     }
 }

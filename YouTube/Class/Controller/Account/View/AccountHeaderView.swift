@@ -29,7 +29,7 @@ class AccountHeaderView: UIView {
         backgroundColor = UIColor.yellow
         
         addSubview(bgimageView)
-        addSubview(logoImageView)
+        addSubview(logoButton)
         addSubview(userNameLabel)
         
     }
@@ -39,7 +39,12 @@ class AccountHeaderView: UIView {
     }
     
     public func fillViewWithData(url: String) {
-        logoImageView.kf.setImage(with: URL(string: url))
+        logoButton.imageView!.kf.setImage(with: URL(string: url))
+    }
+    
+    func changeButtonImage(name: String, callBack:(String)->()) {
+        logoButton.setImage(UIImage(named: name), for: UIControl.State.normal)
+        callBack(name)
     }
     
     // MARK: - 懒加载
@@ -49,12 +54,13 @@ class AccountHeaderView: UIView {
         return imageView
     }()
     
-    lazy var logoImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.layer.cornerRadius = 25
-        imageView.layer.masksToBounds = true
-        imageView.frame = CGRect(x: 25, y: 30, width: 50, height: 50)
-        return imageView
+    lazy var logoButton: UIButton = {
+        let logoButton = UIButton()
+        logoButton.layer.cornerRadius = 25
+        logoButton.layer.masksToBounds = true
+        logoButton.frame = CGRect(x: 25, y: 30, width: 50, height: 50)
+        logoButton.setImage(UIImage(named: "channel5"), for: UIControl.State.normal)
+        return logoButton
     }()
     
     lazy var userNameLabel: UILabel = {

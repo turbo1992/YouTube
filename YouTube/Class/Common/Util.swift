@@ -91,3 +91,8 @@ func CompareDate(aDate: String?, bDate: String?) -> Int {
     }
     return aa
 }
+
+// 生成某个区间的随机数
+public func RandomIntNumber(lower: Int = 0,upper: Int = Int(UInt32.max)) -> Int {
+    return lower + Int(arc4random_uniform(UInt32(upper - lower)))
+}

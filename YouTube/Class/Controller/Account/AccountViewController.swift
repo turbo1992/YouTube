@@ -14,7 +14,14 @@ class AccountViewController: BaseViewController {
     let vedioImages = ["pl-node", "pl-react", "pl-angular", "pl-mongo", "pl-rest", "pl-javascript", "pl-swift"]
     let vedioTitles = ["NodeJS Tutorails", "React development", "Angular 2 Tutorails", "Mongo db", "Rest API Tutorails(Node & Mongo)", "Java Script ES6", "Swift Tutorails"]
     
+    var header: AccountHeaderView!
     var tableview : UITableView?
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.change()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,14 +43,23 @@ class AccountViewController: BaseViewController {
         tableview?.sectionFooterHeight = 0
         view.addSubview(tableview!)
         view.backgroundColor = RGBA(r: 1, g: 1, b: 1, a: 1)
-        let header = AccountHeaderView(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: 120))
+        header = AccountHeaderView(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: 120))
         tableview?.tableHeaderView = header
-        let url = "http://img0.imgtn.bdimg.com/it/u=2366972591,890139901&fm=26&gp=0.jpg"
-        header.fillViewWithData(url: url)
-        let footerView = UIView.init(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: 0.1))
-        tableview?.tableFooterView = footerView
+        header.logoButton.addTarget(self, action: #selector(changeLogo), for: UIControl.Event.touchUpInside)
+        tableview?.tableFooterView = UIView.init(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: 0.1))
     }
     
+    @objc func changeLogo() {
+        self.change()
+    }
+    
+    func change() {
+        let num = RandomIntNumber(lower: 0, upper: 9)
+        let name = "channel" + String(num)
+        header.changeButtonImage(name: name) { (callbackName) in
+            print("new logo : \(callbackName)")
+        }
+    }
 }
 
 extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
@@ -88,7 +104,7 @@ extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
+        self.change()
     }
 }
 
