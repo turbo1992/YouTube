@@ -64,7 +64,8 @@ func SecondsWithDateTime(datetime: Date?) -> Int64 {
     return totalSeconds
 }
 
-func compareDate(aDate: String?, bDate: String?) -> Int {
+// 时间比较
+func CompareDate(aDate: String?, bDate: String?) -> Int {
     var aa = 0
     let dateformater = DateFormatter()
     dateformater.dateFormat = "yyyy-MM-dd HH:mm:ss"

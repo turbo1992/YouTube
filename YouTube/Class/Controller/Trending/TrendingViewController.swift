@@ -25,7 +25,6 @@ class TrendingViewController: BaseViewController {
     }
     
     private func setupUI(){
-        
         setupTableView()
         getArticleList()
     }
@@ -35,26 +34,19 @@ class TrendingViewController: BaseViewController {
     }
     
     func getArticleList() {
-        let urlStr = baseUrl + "/v1/public/articleList"
-        request(urlStr).responseJSON { (response) in
-            switch response.result {
-            case .success(let data):
-                let json = JSON(data)
-                print(json)
-                let articleModel = JSONDeserializer<ArticleModel>.deserializeFrom(json: json.description)
-                if (articleModel?.code == Retcode.SUCCESS.rawValue) {
-                    self.articleList = articleModel?.data?.list
-                } else {
-                    self.showDetailHint(hint: Tip.REQUEST_FAILED.rawValue)
-                }
-                self.reloadTable()
-                break
-            case .failure(let error):
+        let url = baseUrl + "/v1/public/articleList"
+        HttpClient.GET(url: url, params: nil, success: { (data) in
+            let json = JSON(data)
+            print(json)
+            let articleModel = JSONDeserializer<ArticleModel>.deserializeFrom(json: json.description)
+            if (articleModel?.code == Retcode.SUCCESS.rawValue) {
+                self.articleList = articleModel?.data?.list
+            } else {
                 self.showDetailHint(hint: Tip.REQUEST_FAILED.rawValue)
-                self.reloadTable()
-                print("error:\(error)")
-                break
             }
+            self.reloadTable()
+        }) { (state_code, message) in
+            print(message)
         }
     }
     

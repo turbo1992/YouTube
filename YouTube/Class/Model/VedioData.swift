@@ -7,13 +7,24 @@
 //
 
 import UIKit
+import HandyJSON
 
-class VedioData: NSObject {
+struct VedioData: HandyJSON {
     var vedioImgUrl: String!
     var title: String!
     var vedioAuth: String!
     var authLogo: String!
+    
     var playersNum: String!
     var createTime: String!
     var vedioDesc: String!
+    var link: VedioLink!
+}
+
+struct VedioLink: HandyJSON {
+    var link_id: Int?
+    var create_time: String?
+    var link_name: String?
+    var from: String?
+    var amount: String?
 }

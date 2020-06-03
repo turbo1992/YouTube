@@ -67,7 +67,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let data = VedioData()
+        var data = VedioData()
         data.vedioImgUrl = menuTitles[indexPath.row]
         data.title = menuTitles[indexPath.row]
         data.authLogo = logoImages[indexPath.row]

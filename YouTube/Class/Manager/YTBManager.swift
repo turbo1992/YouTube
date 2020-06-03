@@ -10,17 +10,11 @@ import UIKit
 
 class YTBManager: NSObject {
     static let shared = YTBManager()
-    
-    var httpClient: HttpClient!
     var vedioPlayState: Int!
     
     private override init() {
         super.init()
-        print("YouTube manager initilized")
-
-        self.httpClient = HttpClient()
         self.vedioPlayState = VedioPlayState.closed.rawValue
-        
         HostReach().reachabilityForInternetConnection()
     }
 }

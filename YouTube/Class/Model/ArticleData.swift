@@ -7,10 +7,19 @@
 //
 
 import UIKit
+import HandyJSON
 
-class ArticleData: NSObject {
+struct ArticleData: HandyJSON {
     var title: String!
     var coverImgUrl: String!
     var authUrl: String!
     var userName: String!
+    var list: [HistoryArticleListData]!
+}
+
+struct HistoryArticleListData: HandyJSON {
+    var create_time: String?
+    var count: Int?
+    var total: Int?
+    var list_id: Int?
 }
