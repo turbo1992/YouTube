@@ -22,6 +22,8 @@ class TrendingViewController: BaseViewController, TrendingBackDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.articleList = [ArticleInfo]()
         setupUI()
     }
     
@@ -40,7 +42,10 @@ class TrendingViewController: BaseViewController, TrendingBackDelegate {
             print(json)
             let articleModel = JSONDeserializer<ArticleModel>.deserializeFrom(json: json.description)
             if (articleModel?.code == Retcode.SUCCESS.rawValue) {
-                self.articleList = articleModel?.data?.list
+                //self.articleList = articleModel?.data?.list
+                for item in [ArticleInfo]((articleModel?.data?.list)!) {
+                    self.articleList.append(item)
+                }
             } else {
                 self.showDetailHint(hint: Tip.REQUEST_FAILED.rawValue)
             }
@@ -110,8 +115,8 @@ extension TrendingViewController: UITableViewDelegate, UITableViewDataSource {
         print("delegate--->\(res)")
         var article = self.articleList![0]
         article.title = res
-        self.articleList.remove(at: 0)
-        self.articleList.append(article)
+        self.articleList!.remove(at: 0)
+        self.articleList!.append(article)
         self.reloadTable()
         detail.reLoadUI(color: UIColor.purple) { (msg) in
             print("callback--->\(msg)")
