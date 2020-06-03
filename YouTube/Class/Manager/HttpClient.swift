@@ -57,4 +57,11 @@ extension HttpClient {
     class func PUT(url: String, params: [String : Any]?, success: @escaping (_ data: Data) ->(), failure: ((Int?, String) ->Void)?) {
         HttpClient.request(.put, url: url, params: params, success: success, failure: failure)
     }
+    
+    
+    // 获取文章列表
+    class func GetArticleList(success: @escaping (_ data: Data)->(), failure: ((Int?, String) ->Void)?) {
+        let url = baseUrl + "/v1/public/articleList"
+        GET(url: url, params: nil, success: success, failure: failure)
+    }
 }

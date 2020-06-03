@@ -34,8 +34,7 @@ class TrendingViewController: BaseViewController {
     }
     
     func getArticleList() {
-        let url = baseUrl + "/v1/public/articleList"
-        HttpClient.GET(url: url, params: nil, success: { (data) in
+        HttpClient.GetArticleList(success: { (data) in
             let json = JSON(data)
             print(json)
             let articleModel = JSONDeserializer<ArticleModel>.deserializeFrom(json: json.description)
@@ -45,8 +44,8 @@ class TrendingViewController: BaseViewController {
                 self.showDetailHint(hint: Tip.REQUEST_FAILED.rawValue)
             }
             self.reloadTable()
-        }) { (state_code, message) in
-            print(message)
+        }) { (errorCode, message) in
+            print(errorCode as Any, message)
         }
     }
     
