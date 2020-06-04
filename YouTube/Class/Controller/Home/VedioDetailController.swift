@@ -27,7 +27,7 @@ class VedioDetailController: BaseViewController {
         super.viewDidLoad()
         self.title = "Vedio Detail"
         self.setLeftImageNamed(name: "back", action: #selector(popBackController))
-        self.setRightImageNamed(name: "more", action: #selector(showMenu))
+        self.setRightImageNamed(name: "more", action: #selector(pushCommentList))
         setupUI()
     }
     
@@ -38,8 +38,9 @@ class VedioDetailController: BaseViewController {
         self.navigationController?.popViewController(animated: true)
     }
     
-    @objc func showMenu() {
-        
+    @objc func pushCommentList() {
+        let commentList = CommentListViewController()
+        self.navigationController?.pushViewController(commentList, animated: true)
     }
     
     private func setupUI(){
@@ -132,6 +133,7 @@ extension VedioDetailController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
+        let commentList = CommentListViewController()
+        self.navigationController?.pushViewController(commentList, animated: true)
     }
 }

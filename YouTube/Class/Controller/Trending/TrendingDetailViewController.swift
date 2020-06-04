@@ -21,7 +21,7 @@ class TrendingDetailViewController: BaseViewController {
         super.viewDidLoad()
         
         self.title = "TrendingDetail"
-        self.setLeftImageNamed(name: "back", action: #selector(self.popBackController))
+        self.setLeftImageNamed(name: "back", action: #selector(popBackController))
 
         btn = UIButton()
         btn.backgroundColor = kAppMainRedColor

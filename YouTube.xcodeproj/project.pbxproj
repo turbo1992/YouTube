@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		35789E566AC84E1E4F13163E /* Pods_YouTubeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3394E72C6A2C621EEF94A93C /* Pods_YouTubeTests.framework */; };
 		7D33EFCAE880C7B55E002A68 /* Pods_YouTubeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD8A0BFCA7FD7453909A399 /* Pods_YouTubeUITests.framework */; };
+		B505B5C02488C89E00628BE6 /* CommentListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B505B5BF2488C89E00628BE6 /* CommentListCell.swift */; };
+		B505B5C22488C8CD00628BE6 /* CommentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B505B5C12488C8CD00628BE6 /* CommentListViewController.swift */; };
+		B505B5C82488D8F500628BE6 /* CommentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B505B5C72488D8F500628BE6 /* CommentData.swift */; };
 		B53E1A3E2473BAAD004BBED2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53E1A3D2473BAAD004BBED2 /* AppDelegate.swift */; };
 		B53E1A422473BAAD004BBED2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53E1A412473BAAD004BBED2 /* ViewController.swift */; };
 		B53E1A452473BAAD004BBED2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B53E1A432473BAAD004BBED2 /* Main.storyboard */; };
@@ -82,6 +85,9 @@
 		6FCE8095CF81E784155431E0 /* Pods-YouTubeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTubeUITests.release.xcconfig"; path = "Target Support Files/Pods-YouTubeUITests/Pods-YouTubeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		72DA37173A7B46FF680A9EF3 /* Pods-YouTube.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTube.release.xcconfig"; path = "Target Support Files/Pods-YouTube/Pods-YouTube.release.xcconfig"; sourceTree = "<group>"; };
 		8DFDB97A37989A89D7A3A3C6 /* Pods-YouTube.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTube.debug.xcconfig"; path = "Target Support Files/Pods-YouTube/Pods-YouTube.debug.xcconfig"; sourceTree = "<group>"; };
+		B505B5BF2488C89E00628BE6 /* CommentListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListCell.swift; sourceTree = "<group>"; };
+		B505B5C12488C8CD00628BE6 /* CommentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListViewController.swift; sourceTree = "<group>"; };
+		B505B5C72488D8F500628BE6 /* CommentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentData.swift; sourceTree = "<group>"; };
 		B53E1A3A2473BAAD004BBED2 /* YouTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B53E1A3D2473BAAD004BBED2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B53E1A412473BAAD004BBED2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -293,6 +299,7 @@
 			children = (
 				B53E1AB2247CC623004BBED2 /* HomeViewController.swift */,
 				B53E1ACA247D2DC0004BBED2 /* VedioDetailController.swift */,
+				B505B5C12488C8CD00628BE6 /* CommentListViewController.swift */,
 				B53E1AC7247D2400004BBED2 /* View */,
 			);
 			path = Home;
@@ -342,6 +349,7 @@
 				B5CE80AD247E63B3001F1205 /* VedioData.swift */,
 				B56623EB2480FCA300B7F2DD /* ArticleData.swift */,
 				B5AD5DC42486347A00FF1B67 /* ArticleModel.swift */,
+				B505B5C72488D8F500628BE6 /* CommentData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -352,6 +360,7 @@
 				B53E1AC8247D2450004BBED2 /* VedioCell.swift */,
 				B5CE80AB247E61DE001F1205 /* VedioDetailHeaderView.swift */,
 				B5CE80AF247E65ED001F1205 /* RecomandVedioCell.swift */,
+				B505B5BF2488C89E00628BE6 /* CommentListCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -626,6 +635,7 @@
 				B5CE80D0247F8F20001F1205 /* ESTabBarItemBadgeView.swift in Sources */,
 				B5CE80B0247E65ED001F1205 /* RecomandVedioCell.swift in Sources */,
 				B5AD5DC52486347A00FF1B67 /* ArticleModel.swift in Sources */,
+				B505B5C82488D8F500628BE6 /* CommentData.swift in Sources */,
 				B53E1ABC247CC623004BBED2 /* AccountViewController.swift in Sources */,
 				B53E1ABB247CC623004BBED2 /* TrendingViewController.swift in Sources */,
 				B53E1ACB247D2DC0004BBED2 /* VedioDetailController.swift in Sources */,
@@ -636,6 +646,7 @@
 				B5AD5DBF2486252800FF1B67 /* HostReach.swift in Sources */,
 				B5CE80D2247F8F20001F1205 /* ESTabBarItemContainer.swift in Sources */,
 				B56623E2247FB5F900B7F2DD /* ModelManager.swift in Sources */,
+				B505B5C02488C89E00628BE6 /* CommentListCell.swift in Sources */,
 				B53E1AC9247D2450004BBED2 /* VedioCell.swift in Sources */,
 				B53E1AC1247CE83C004BBED2 /* AccountCell.swift in Sources */,
 				B56623E4247FB60A00B7F2DD /* HttpClient.swift in Sources */,
@@ -652,6 +663,7 @@
 				B5CE80D1247F8F20001F1205 /* ESTabBar.swift in Sources */,
 				B53E1A3E2473BAAD004BBED2 /* AppDelegate.swift in Sources */,
 				B53E1AC6247D14C6004BBED2 /* AccountVedioInfoCell.swift in Sources */,
+				B505B5C22488C8CD00628BE6 /* CommentListViewController.swift in Sources */,
 				B56623EA2480F64F00B7F2DD /* YTBDefine.swift in Sources */,
 				B5AD5DCB248774A600FF1B67 /* TrendingDetailViewController.swift in Sources */,
 				B58A522C247FA5960072F589 /* BasicContentView.swift in Sources */,
