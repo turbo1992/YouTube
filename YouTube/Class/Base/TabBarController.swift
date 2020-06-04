@@ -24,7 +24,7 @@ class TabBarController: ESTabBarController {
         
         v1.title = "Home"
         v2.title = "Trending"
-        v3.title = "Vedios"
+        v3.title = "Subscriptions"
         v4.title = "Account"
         
         let nav1 = BaseNavigationController(rootViewController: v1)
