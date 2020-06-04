@@ -19,13 +19,19 @@ class BaseViewController: UIViewController {
     
     func setLeftImageNamed(name: String, action: Selector) {
         let image = UIImage(named: name)
-        let backItem = UIBarButtonItem.init(image: image, style: UIBarButtonItem.Style.plain, target: self, action: action)
-        self.navigationItem.leftBarButtonItem = backItem
+        let leftItem = UIBarButtonItem.init(image: image, style: UIBarButtonItem.Style.plain, target: self, action: action)
+        self.navigationItem.leftBarButtonItem = leftItem
         
         // 自定义返回按钮恢复返回手势
         if (navigationController?.viewControllers.count ?? 0) > 1 {
             navigationController?.interactivePopGestureRecognizer?.delegate = self as? UIGestureRecognizerDelegate
         }
+    }
+    
+    func setRightImageNamed(name: String, action: Selector) {
+        let image = UIImage(named: name)
+        let rightItem = UIBarButtonItem.init(image: image, style: UIBarButtonItem.Style.plain, target: self, action: action)
+        self.navigationItem.rightBarButtonItem = rightItem
     }
     
     func setNavigationBarBackgroundImage(image: UIImage, tintColor: UIColor, textColor: UIColor, style: UIStatusBarStyle) {

@@ -16,7 +16,7 @@ class SubscripHeaderView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupUI()
+        createUI()
     }
     
     override func layoutSubviews() {
@@ -24,68 +24,35 @@ class SubscripHeaderView: UIView {
         setupUIFrame()
     }
     
-    // MARK: - 视图
-    private func setupUI(){
+    private func createUI(){
         backgroundColor = UIColor.white
-        
-        addSubview(logoImageView1)
-        addSubview(logoImageView2)
-        addSubview(logoImageView3)
-        addSubview(logoImageView4)
-        addSubview(logoImageView5)
-        addSubview(logoImageView6)
+        addSubview(scrollView)
     }
     
     private func setupUIFrame() {
-        
+        scrollView.snp.makeConstraints { (make) in
+            make.left.top.right.bottom.equalToSuperview()
+        }
     }
     
-    // MARK: - 懒加载
-    lazy var logoImageView1: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "channel1"))
-        imageView.layer.cornerRadius = 25
-        imageView.layer.masksToBounds = true
-        imageView.frame = CGRect(x: 15, y: 25, width: 50, height: 50)
-        return imageView
-    }()
+    func fillAuthData() {
+        let list = 0...8
+        for idx in list {
+            let authImg = "channel" + String(idx + 1)
+            let imageView = UIImageView(image: UIImage(named: authImg))
+            imageView.layer.cornerRadius = 25
+            imageView.layer.masksToBounds = true
+            imageView.frame = CGRect(x: 15 + idx * (50 + 15), y: 25, width: 50, height: 50)
+            scrollView.addSubview(imageView)
+            scrollView.contentSize = CGSize(width: 65 * list.count + 15, height: 50)
+        }
+    }
     
-    lazy var logoImageView2: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "channel2"))
-        imageView.layer.cornerRadius = 25
-        imageView.layer.masksToBounds = true
-        imageView.frame = CGRect(x: 80, y: 25, width: 50, height: 50)
-        return imageView
-    }()
-    
-    lazy var logoImageView3: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "channel3"))
-        imageView.layer.cornerRadius = 25
-        imageView.layer.masksToBounds = true
-        imageView.frame = CGRect(x: 145, y: 25, width: 50, height: 50)
-        return imageView
-    }()
-    
-    lazy var logoImageView4: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "channel4"))
-        imageView.layer.cornerRadius = 25
-        imageView.layer.masksToBounds = true
-        imageView.frame = CGRect(x: 210, y: 25, width: 50, height: 50)
-        return imageView
-    }()
-    
-    lazy var logoImageView5: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "channel5"))
-        imageView.layer.cornerRadius = 25
-        imageView.layer.masksToBounds = true
-        imageView.frame = CGRect(x: 275, y: 25, width: 50, height: 50)
-        return imageView
-    }()
-    
-    lazy var logoImageView6: UIImageView = {
-        let imageView = UIImageView(image: UIImage(named: "channel7"))
-        imageView.layer.cornerRadius = 25
-        imageView.layer.masksToBounds = true
-        imageView.frame = CGRect(x: 340, y: 25, width: 50, height: 50)
-        return imageView
+    lazy var scrollView: UIScrollView = {
+        let scrollView = UIScrollView()
+        scrollView.backgroundColor = .white
+        scrollView.showsVerticalScrollIndicator = false
+        scrollView.showsHorizontalScrollIndicator = false
+        return scrollView
     }()
 }

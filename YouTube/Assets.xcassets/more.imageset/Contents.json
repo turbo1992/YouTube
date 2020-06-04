@@ -1,15 +1,16 @@
 {
   "images" : [
     {
-      "filename" : "live.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "Dian@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "Dian@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -15,14 +15,14 @@ class SubscriptionsViewController: BaseViewController {
     let descs = ["Molly   2020-05-26 18:42", "Seeker   2020-05-26 17:01", "Molly   2020-05-26 18:42", "Molly   2020-05-26 18:42", "Molly   2020-05-26 18:42", " 2020-05-26 18:42"]
     let times = ["01:52", "03:08", "00:53", "02:15", "03:21", "04:28"]
     
-    var tableview : UITableView?
+    var tableview: UITableView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        createUI()
     }
     
-    private func setupUI(){
+    private func createUI(){
         setupTableView()
     }
     
@@ -35,11 +35,15 @@ class SubscriptionsViewController: BaseViewController {
         tableview?.sectionHeaderHeight = 0
         tableview?.sectionFooterHeight = 0
         view.addSubview(tableview!)
-        tableview?.tableHeaderView = SubscripHeaderView(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: 90))
-        let footerView = UIView.init(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: 0.1))
-        tableview?.tableFooterView = footerView
+        tableview?.tableHeaderView = headerView
+        tableview?.tableFooterView = UIView.init(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: 0.1))
     }
     
+    lazy var headerView: SubscripHeaderView = {
+        let header = SubscripHeaderView(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: 90))
+        header.fillAuthData()
+        return header
+    }()
 }
 
 extension SubscriptionsViewController: UITableViewDelegate, UITableViewDataSource {
