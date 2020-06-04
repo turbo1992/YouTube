@@ -22,13 +22,24 @@ class CommentListViewController: BaseViewController {
     var tableView : UITableView?
     var commentList = ["We are not the beginning of the pursuit of others, but every unknown tomorrow. ",
                        "Live beautifully， dream passionately， love completely",
-                       "For something，we can't understand when we are young but by the time we understand，we are no longer young for we are the champion. \n We improve ourselves by victories over ourselves。 There must be contests， and we must win.",
+                       "For something，we can't understand when we are young but by the time we understand，we are no longer young for we are the champion. \n\n We improve ourselves by victories over ourselves。 There must be contests， and we must win.",
                        "I can make it through the rain. I can stand up once again on my own.",
                        "give more than you planned to.",
                        "We must accept finite disappointment, but we must never lose infinite hope. -- Mattin Luther King.",
-                       "For something，we can't understand when we are young but by the time we understand，we are no longer young for we are the champion. \n We improve ourselves by victories over ourselves。 There must be contests， and we must win.",
+                       "For something，we can't understand when we are young but by the time we understand，we are no longer young for we are the champion. \n\n We improve ourselves by victories over ourselves。 There must be contests， and we must win.",
                        "I can make it through the rain. I can stand up once again on my own."
     ]
+    
+    var imagesArr = [["channel1", "channel2"],
+                  [],
+                  ["channel1", "channel2", "channel3"],
+                  [],
+                  [],
+                  [],
+                  ["channel1", "channel2", "channel3"],
+                  []
+    ]
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -69,6 +80,7 @@ extension CommentListViewController: UITableViewDelegate, UITableViewDataSource 
         cell.commentTitle.text = menuTitles[indexPath.row]
         cell.commentDes.text = commentList[indexPath.row]
         cell.timeLabel.text = "2020-06-04 15:32"
+        cell.setImageViews(images: imagesArr[indexPath.row])
         return cell
     }
     

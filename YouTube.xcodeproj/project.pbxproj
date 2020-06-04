@@ -11,7 +11,6 @@
 		7D33EFCAE880C7B55E002A68 /* Pods_YouTubeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD8A0BFCA7FD7453909A399 /* Pods_YouTubeUITests.framework */; };
 		B505B5C02488C89E00628BE6 /* CommentListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B505B5BF2488C89E00628BE6 /* CommentListCell.swift */; };
 		B505B5C22488C8CD00628BE6 /* CommentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B505B5C12488C8CD00628BE6 /* CommentListViewController.swift */; };
-		B505B5C82488D8F500628BE6 /* CommentData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B505B5C72488D8F500628BE6 /* CommentData.swift */; };
 		B53E1A3E2473BAAD004BBED2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53E1A3D2473BAAD004BBED2 /* AppDelegate.swift */; };
 		B53E1A422473BAAD004BBED2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53E1A412473BAAD004BBED2 /* ViewController.swift */; };
 		B53E1A452473BAAD004BBED2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B53E1A432473BAAD004BBED2 /* Main.storyboard */; };
@@ -87,7 +86,6 @@
 		8DFDB97A37989A89D7A3A3C6 /* Pods-YouTube.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTube.debug.xcconfig"; path = "Target Support Files/Pods-YouTube/Pods-YouTube.debug.xcconfig"; sourceTree = "<group>"; };
 		B505B5BF2488C89E00628BE6 /* CommentListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListCell.swift; sourceTree = "<group>"; };
 		B505B5C12488C8CD00628BE6 /* CommentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListViewController.swift; sourceTree = "<group>"; };
-		B505B5C72488D8F500628BE6 /* CommentData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentData.swift; sourceTree = "<group>"; };
 		B53E1A3A2473BAAD004BBED2 /* YouTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B53E1A3D2473BAAD004BBED2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B53E1A412473BAAD004BBED2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -349,7 +347,6 @@
 				B5CE80AD247E63B3001F1205 /* VedioData.swift */,
 				B56623EB2480FCA300B7F2DD /* ArticleData.swift */,
 				B5AD5DC42486347A00FF1B67 /* ArticleModel.swift */,
-				B505B5C72488D8F500628BE6 /* CommentData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -635,7 +632,6 @@
 				B5CE80D0247F8F20001F1205 /* ESTabBarItemBadgeView.swift in Sources */,
 				B5CE80B0247E65ED001F1205 /* RecomandVedioCell.swift in Sources */,
 				B5AD5DC52486347A00FF1B67 /* ArticleModel.swift in Sources */,
-				B505B5C82488D8F500628BE6 /* CommentData.swift in Sources */,
 				B53E1ABC247CC623004BBED2 /* AccountViewController.swift in Sources */,
 				B53E1ABB247CC623004BBED2 /* TrendingViewController.swift in Sources */,
 				B53E1ACB247D2DC0004BBED2 /* VedioDetailController.swift in Sources */,
