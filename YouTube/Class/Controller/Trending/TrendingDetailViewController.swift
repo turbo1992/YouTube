@@ -22,7 +22,11 @@ class TrendingDetailViewController: BaseViewController {
         
         self.title = "TrendingDetail"
         self.setLeftImageNamed(name: "back", action: #selector(popBackController))
-
+        
+        let s = "Give more than you planned to. We are not the beginning of the pursuit of others, but every unknown tomorrow. We are not the beginning of the pursuit of others, but every unknown tomorrow. We are not the beginning of the pursuit of others, but every unknown tomorrow.\nGive more than you planned to. We are not the beginning of the pursuit of others, but every unknown tomorrow. We are not the beginning of the pursuit of others, but every unknown tomorrow. We are not the beginning of the pursuit of others, but every unknown tomorrow."
+        let h = GetHeightForText(text: s, fontSize: 12, width: MainScreenWidth)
+        print("height----->\(h)")
+        
         btn = UIButton()
         btn.backgroundColor = kAppMainRedColor
         btn.setTitle("test delegate", for: UIControl.State.normal)

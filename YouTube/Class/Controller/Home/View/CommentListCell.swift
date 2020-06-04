@@ -32,7 +32,6 @@ class CommentListCell: UITableViewCell {
     
     func setImageViews(images: Array<Any>) {
         self.images = images
-        self.layoutSubviews()
     }
     
     override func layoutSubviews() {
@@ -78,24 +77,24 @@ class CommentListCell: UITableViewCell {
                 
 //        cmtImgView.isHidden = true
 //        if (self.images != nil && self.images.count > 0) {
-//            cmtImgView.image = UIImage(named: "channel4")
-//            cmtImgView.snp.makeConstraints { (make) in
-//                make.left.equalTo(commentTitle.snp_left)
-//                make.top.equalTo(commentTitle.snp_bottom).offset(10.0)
-//                make.size.equalTo((MainScreenWidth - 90) / 3)
-//            }
-//            cmtImgView.isHidden = false
-//            commentDes.snp.makeConstraints { (make) in
-//                make.left.equalTo(commentTitle.snp_left)
-//                make.top.equalTo(cmtImgView.snp_bottom).offset(5.0)
-//                make.width.equalTo(commentTitle)
-//            }
-//        } else {
+            cmtImgView.image = UIImage(named: "channel4")
+            cmtImgView.snp.makeConstraints { (make) in
+                make.left.equalTo(commentTitle.snp_left)
+                make.top.equalTo(commentTitle.snp_bottom).offset(10.0)
+                make.size.equalTo((MainScreenWidth - 90) / 3)
+            }
+            cmtImgView.isHidden = false
             commentDes.snp.makeConstraints { (make) in
                 make.left.equalTo(commentTitle.snp_left)
-                make.top.equalTo(commentTitle.snp_bottom).offset(5.0)
+                make.top.equalTo(cmtImgView.snp_bottom).offset(10.0)
                 make.width.equalTo(commentTitle)
             }
+//        } else {
+//            commentDes.snp.makeConstraints { (make) in
+//                make.left.equalTo(commentTitle.snp_left)
+//                make.top.equalTo(commentTitle.snp_bottom).offset(5.0)
+//                make.width.equalTo(commentTitle)
+//            }
 //        }
         
         

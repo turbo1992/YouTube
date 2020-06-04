@@ -96,3 +96,16 @@ func CompareDate(aDate: String?, bDate: String?) -> Int {
 public func RandomIntNumber(lower: Int = 0,upper: Int = Int(UInt32.max)) -> Int {
     return lower + Int(arc4random_uniform(UInt32(upper - lower)))
 }
+
+// 根据文本大小和宽度计算文本高度
+public func GetHeightForText(text: String, fontSize: CGFloat, width: CGFloat) -> CGFloat {
+    return text.heightForString(fontSize: fontSize, width: width)
+}
+
+extension String {
+    func heightForString(fontSize: CGFloat, width: CGFloat) -> CGFloat {
+        let font = UIFont.systemFont(ofSize: fontSize)
+        let rect = NSString(string: self).boundingRect(with: CGSize(width: width, height: CGFloat(MAXFLOAT)), options: .usesLineFragmentOrigin, attributes: [NSAttributedString.Key.font: font], context: nil)
+        return ceil(rect.height)
+    }
+}
