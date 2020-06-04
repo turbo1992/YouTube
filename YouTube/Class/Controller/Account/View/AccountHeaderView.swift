@@ -35,7 +35,21 @@ class AccountHeaderView: UIView {
     }
     
     private func setupUIFrame() {
-        
+        bgimageView.snp.makeConstraints { (make) in
+            make.center.equalToSuperview()
+            make.size.equalToSuperview()
+        }
+        logoButton.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(25)
+            make.top.equalToSuperview().offset(30)
+            make.size.equalTo(50)
+        }
+        userNameLabel.snp.makeConstraints { (make) in
+            make.left.equalToSuperview().offset(25)
+            make.top.equalToSuperview().offset(90)
+            make.right.equalToSuperview().offset(-25)
+            make.height.equalTo(15)
+        }
     }
     
     public func fillViewWithData(url: String) {
@@ -50,7 +64,6 @@ class AccountHeaderView: UIView {
     // MARK: - 懒加载
     lazy var bgimageView: UIImageView = {
         let imageView = UIImageView(image: UIImage(named: "banner"))
-        imageView.frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height)
         return imageView
     }()
     
@@ -58,14 +71,12 @@ class AccountHeaderView: UIView {
         let logoButton = UIButton()
         logoButton.layer.cornerRadius = 25
         logoButton.layer.masksToBounds = true
-        logoButton.frame = CGRect(x: 25, y: 30, width: 50, height: 50)
         logoButton.setImage(UIImage(named: "channel5"), for: UIControl.State.normal)
         return logoButton
     }()
     
     lazy var userNameLabel: UILabel = {
         let userNameLabel = UILabel()
-        userNameLabel.frame = CGRect(x: 25, y: 90, width: 200, height: 15)
         userNameLabel.textColor = UIColor.white
         userNameLabel.font = UIFont.systemFont(ofSize: 14)
         userNameLabel.text = "Haki Lortiry"

@@ -26,24 +26,54 @@ class AccountVedioInfoCell: UITableViewCell {
         createCellUI()
     }
     
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        setupUIFrame()
+    }
+    
+    private func setupUIFrame() {
+        leftImageView.snp.makeConstraints { (make) in
+            make.left.top.equalToSuperview().offset(15)
+            make.size.equalTo(50)
+        }
+        titleLabel.snp.makeConstraints { (make) in
+            make.left.equalTo(leftImageView.snp_right).offset(15)
+            make.top.equalTo(leftImageView).offset(2.5)
+            make.right.equalToSuperview().offset(-15)
+            make.height.equalTo(20)
+        }
+        descriptionLabel.snp.makeConstraints { (make) in
+            make.left.equalTo(titleLabel)
+            make.top.equalTo(titleLabel.snp_bottom).offset(5)
+            make.right.equalToSuperview().offset(-15)
+            make.height.equalTo(20)
+        }
+        botLine.snp.makeConstraints { (make) in
+            make.bottom.equalToSuperview()
+            make.centerX.equalToSuperview()
+            make.width.equalToSuperview()
+            make.height.equalTo(1)
+        }
+    }
+    
     func createCellUI() {
-        leftImageView = UIImageView.init(frame : CGRect(x:15.0, y:15.0, width:50.0, height:50.0))
+        leftImageView = UIImageView()
         leftImageView!.backgroundColor = UIColor.white
         leftImageView.contentMode = UIView.ContentMode.scaleAspectFit
         self.contentView.addSubview(leftImageView!)
         
-        titleLabel = UILabel.init(frame: CGRect(x: 80, y: 15, width: 300, height: 20))
+        titleLabel = UILabel()
         titleLabel.font = UIFont.systemFont(ofSize: 18)
         titleLabel.textColor = kAppDarkGrayColor
         self.contentView.addSubview(titleLabel)
         
-        descriptionLabel = UILabel.init(frame: CGRect(x: 80, y: 45, width: 200, height: 20))
+        descriptionLabel = UILabel()
         descriptionLabel.font = UIFont.systemFont(ofSize: 13)
         descriptionLabel.textColor = UIColor.gray
         descriptionLabel.text = "42 vedios"
         self.contentView.addSubview(descriptionLabel)
         
-        botLine = UIView.init(frame: CGRect(x: 0, y: 79, width: MainScreenWidth, height: 1))
+        botLine = UIView()
         botLine.backgroundColor = kAppLineGrayColor
         self.contentView.addSubview(botLine)
     }

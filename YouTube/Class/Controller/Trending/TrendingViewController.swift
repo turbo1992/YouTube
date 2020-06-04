@@ -30,6 +30,7 @@ class TrendingViewController: BaseViewController, TrendingBackDelegate {
     private func setupUI(){
         setupTableView()
         getArticleList()
+        getArticleList()
     }
     
     @objc func refreshData() {
@@ -42,7 +43,6 @@ class TrendingViewController: BaseViewController, TrendingBackDelegate {
             print(json)
             let articleModel = JSONDeserializer<ArticleModel>.deserializeFrom(json: json.description)
             if (articleModel?.code == Retcode.SUCCESS.rawValue) {
-                //self.articleList = articleModel?.data?.list
                 for item in [ArticleInfo]((articleModel?.data?.list)!) {
                     self.articleList.append(item)
                 }

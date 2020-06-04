@@ -45,7 +45,9 @@ class TrendingDetailViewController: BaseViewController {
     }
     
     func reLoadUI(color: UIColor, callBack:(String)->()) {
-        btn.backgroundColor = color
+        UIView.animate(withDuration: 0.35) {
+            self.btn.backgroundColor = color
+        }
         callBack("purple color")
     }
 

@@ -1,16 +1,16 @@
 {
   "images" : [
     {
-      "filename" : "favor_1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "favor_1@2x.png",
+      "filename" : "unconfirm@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "unconfirm@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

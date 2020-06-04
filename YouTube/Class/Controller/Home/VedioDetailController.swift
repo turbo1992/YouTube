@@ -20,14 +20,14 @@ class VedioDetailController: BaseViewController {
     var tableview : UITableView?
     var vedioId: String!
     var vedioData: VedioData!
-    
+    var status: Bool! = false
     var end: playEnd!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Vedio Detail"
-        self.setLeftImageNamed(name: "back", action: #selector(self.popBackController))
-        
+        self.setLeftImageNamed(name: "back", action: #selector(popBackController))
+        self.setRightImageNamed(name: "more", action: #selector(showMenu))
         setupUI()
     }
     
@@ -36,6 +36,10 @@ class VedioDetailController: BaseViewController {
             end!(100)
         }
         self.navigationController?.popViewController(animated: true)
+    }
+    
+    @objc func showMenu() {
+        
     }
     
     private func setupUI(){
@@ -65,6 +69,20 @@ class VedioDetailController: BaseViewController {
         headerView.fillViewData(data: vedioData)
         return headerView
     }
+    
+    @objc func switchStatus(sender:UIButton ) {
+        let alert = UIAlertController(title: "Warning", message: "Status will Open", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { action in
+            self.showDetailHint(hint: "Switch cancel")
+        }))
+        alert.addAction(UIAlertAction(title: "Confirm", style: .destructive, handler: { action in
+            sender.isSelected = !sender.isSelected
+            self.showDetailHint(hint: "Status opened")
+            self.status = sender.isSelected
+        }))
+        present(alert, animated: true)
+    }
+    
 }
 
 extension VedioDetailController: UITableViewDelegate, UITableViewDataSource {
@@ -78,7 +96,7 @@ extension VedioDetailController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let sectionHeader = UIView(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: 110))
+        let sectionHeader = UIView(frame: CGRect(x: 0, y: 0, width: MainScreenWidth, height: 40))
         sectionHeader.backgroundColor = UIColor.white
         
         let textL = UILabel(frame: CGRect(x: 15, y: 10, width: 100, height: 20))
@@ -87,8 +105,11 @@ extension VedioDetailController: UITableViewDelegate, UITableViewDataSource {
         textL.textColor = kAppTextColor
         sectionHeader .addSubview(textL)
         
-        let switchBtn = UIButton(frame: CGRect(x: MainScreenWidth-70, y: 10, width: 60, height: 20))
-        switchBtn.setImage(UIImage(named: "live"), for: UIControl.State.normal)
+        let switchBtn = UIButton(frame: CGRect(x: MainScreenWidth-70, y: 5, width: 60, height: 30))
+        switchBtn.setImage(UIImage(named: "unconfirm"), for: UIControl.State.normal)
+        switchBtn.setImage(UIImage(named: "confirm"), for: UIControl.State.selected)
+        switchBtn.isSelected = self.status
+        switchBtn.addTarget(self, action: #selector(switchStatus(sender:)), for: .touchUpInside)
         sectionHeader.addSubview(switchBtn)
         
         return sectionHeader
