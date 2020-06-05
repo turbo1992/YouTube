@@ -11,6 +11,11 @@
 		7D33EFCAE880C7B55E002A68 /* Pods_YouTubeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD8A0BFCA7FD7453909A399 /* Pods_YouTubeUITests.framework */; };
 		B505B5C02488C89E00628BE6 /* CommentListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B505B5BF2488C89E00628BE6 /* CommentListCell.swift */; };
 		B505B5C22488C8CD00628BE6 /* CommentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B505B5C12488C8CD00628BE6 /* CommentListViewController.swift */; };
+		B505B5CC248A297A00628BE6 /* TrendingLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B505B5CB248A297A00628BE6 /* TrendingLineViewController.swift */; };
+		B505B5D2248A2CC300628BE6 /* TrendingLineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B505B5D0248A2CC200628BE6 /* TrendingLineViewModel.swift */; };
+		B505B5D4248A2CE100628BE6 /* TrendingLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B505B5D3248A2CE100628BE6 /* TrendingLineCell.swift */; };
+		B505B5D6248A2D0B00628BE6 /* TrendingLinePicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B505B5D5248A2D0B00628BE6 /* TrendingLinePicCell.swift */; };
+		B505B5D8248A34E100628BE6 /* TrendingLineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B505B5D7248A34E100628BE6 /* TrendingLineData.swift */; };
 		B53E1A3E2473BAAD004BBED2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53E1A3D2473BAAD004BBED2 /* AppDelegate.swift */; };
 		B53E1A422473BAAD004BBED2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53E1A412473BAAD004BBED2 /* ViewController.swift */; };
 		B53E1A452473BAAD004BBED2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B53E1A432473BAAD004BBED2 /* Main.storyboard */; };
@@ -86,6 +91,11 @@
 		8DFDB97A37989A89D7A3A3C6 /* Pods-YouTube.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YouTube.debug.xcconfig"; path = "Target Support Files/Pods-YouTube/Pods-YouTube.debug.xcconfig"; sourceTree = "<group>"; };
 		B505B5BF2488C89E00628BE6 /* CommentListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListCell.swift; sourceTree = "<group>"; };
 		B505B5C12488C8CD00628BE6 /* CommentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentListViewController.swift; sourceTree = "<group>"; };
+		B505B5CB248A297A00628BE6 /* TrendingLineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingLineViewController.swift; sourceTree = "<group>"; };
+		B505B5D0248A2CC200628BE6 /* TrendingLineViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingLineViewModel.swift; sourceTree = "<group>"; };
+		B505B5D3248A2CE100628BE6 /* TrendingLineCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingLineCell.swift; sourceTree = "<group>"; };
+		B505B5D5248A2D0B00628BE6 /* TrendingLinePicCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingLinePicCell.swift; sourceTree = "<group>"; };
+		B505B5D7248A34E100628BE6 /* TrendingLineData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingLineData.swift; sourceTree = "<group>"; };
 		B53E1A3A2473BAAD004BBED2 /* YouTube.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YouTube.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B53E1A3D2473BAAD004BBED2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B53E1A412473BAAD004BBED2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +201,23 @@
 				6AD8A0BFCA7FD7453909A399 /* Pods_YouTubeUITests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B505B5CF248A2CC200628BE6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B505B5D0248A2CC200628BE6 /* TrendingLineViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B505B5D1248A2CC300628BE6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B505B5D3248A2CE100628BE6 /* TrendingLineCell.swift */,
+				B505B5D5248A2D0B00628BE6 /* TrendingLinePicCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		B53E1A312473BAAD004BBED2 = {
@@ -316,7 +343,10 @@
 			isa = PBXGroup;
 			children = (
 				B53E1AB6247CC623004BBED2 /* TrendingViewController.swift */,
+				B505B5CB248A297A00628BE6 /* TrendingLineViewController.swift */,
 				B5AD5DCA248774A600FF1B67 /* TrendingDetailViewController.swift */,
+				B505B5CF248A2CC200628BE6 /* ViewModel */,
+				B505B5D1248A2CC300628BE6 /* View */,
 			);
 			path = Trending;
 			sourceTree = "<group>";
@@ -347,6 +377,7 @@
 				B5CE80AD247E63B3001F1205 /* VedioData.swift */,
 				B56623EB2480FCA300B7F2DD /* ArticleData.swift */,
 				B5AD5DC42486347A00FF1B67 /* ArticleModel.swift */,
+				B505B5D7248A34E100628BE6 /* TrendingLineData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -633,13 +664,16 @@
 				B5CE80B0247E65ED001F1205 /* RecomandVedioCell.swift in Sources */,
 				B5AD5DC52486347A00FF1B67 /* ArticleModel.swift in Sources */,
 				B53E1ABC247CC623004BBED2 /* AccountViewController.swift in Sources */,
+				B505B5D8248A34E100628BE6 /* TrendingLineData.swift in Sources */,
 				B53E1ABB247CC623004BBED2 /* TrendingViewController.swift in Sources */,
 				B53E1ACB247D2DC0004BBED2 /* VedioDetailController.swift in Sources */,
 				B53E1AB0247CC521004BBED2 /* TabBarController.swift in Sources */,
 				B5CE80CC247F8F20001F1205 /* ESTabBarItemMoreContentView.swift in Sources */,
 				B5CE80AE247E63B3001F1205 /* VedioData.swift in Sources */,
+				B505B5D6248A2D0B00628BE6 /* TrendingLinePicCell.swift in Sources */,
 				B53E1ABF247CC764004BBED2 /* AccountHeaderView.swift in Sources */,
 				B5AD5DBF2486252800FF1B67 /* HostReach.swift in Sources */,
+				B505B5D4248A2CE100628BE6 /* TrendingLineCell.swift in Sources */,
 				B5CE80D2247F8F20001F1205 /* ESTabBarItemContainer.swift in Sources */,
 				B56623E2247FB5F900B7F2DD /* ModelManager.swift in Sources */,
 				B505B5C02488C89E00628BE6 /* CommentListCell.swift in Sources */,
@@ -662,7 +696,9 @@
 				B505B5C22488C8CD00628BE6 /* CommentListViewController.swift in Sources */,
 				B56623EA2480F64F00B7F2DD /* YTBDefine.swift in Sources */,
 				B5AD5DCB248774A600FF1B67 /* TrendingDetailViewController.swift in Sources */,
+				B505B5D2248A2CC300628BE6 /* TrendingLineViewModel.swift in Sources */,
 				B58A522C247FA5960072F589 /* BasicContentView.swift in Sources */,
+				B505B5CC248A297A00628BE6 /* TrendingLineViewController.swift in Sources */,
 				B5CE7FBE247E1589001F1205 /* SubscripHeaderView.swift in Sources */,
 				B5CE80CD247F8F20001F1205 /* ESTabBarController.swift in Sources */,
 				B56623B5247FA94100B7F2DD /* BaseNavigationController.swift in Sources */,
