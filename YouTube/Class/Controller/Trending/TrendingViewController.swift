@@ -109,10 +109,13 @@ extension TrendingViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        detail = TrendingDetailViewController()
-        detail.delegate = self
-        detail.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(detail, animated: true)
+//        detail = TrendingDetailViewController()
+//        detail.delegate = self
+//        detail.hidesBottomBarWhenPushed = true
+//        self.navigationController?.pushViewController(detail, animated: true)
+        let trendingLine = TrendingLineViewController()
+        trendingLine.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(trendingLine, animated: true)
     }
     
     func trendingBack(res: String) {
