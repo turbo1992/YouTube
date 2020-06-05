@@ -12,11 +12,11 @@ class CommentListCell: UITableViewCell {
     
     var userLogoImgView: UIImageView!
     var commentTitle: UILabel!
-    var cmtImgView: UIImageView!
+    var commentImgView: UIImageView!
     var commentDes: UILabel!
     var timeLabel: UILabel!
     var botLine: UIView!
-    var images: Array<Any>!
+    var images: Array<String>!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -30,13 +30,27 @@ class CommentListCell: UITableViewCell {
         setupUIFrame()
     }
     
-    func setImageViews(images: Array<Any>) {
+    func setImageViews(images: Array<String>) {
         self.images = images
+        updateCommentImgVConstant()
+    }
+    
+    func updateCommentImgVConstant() {
+        if (self.images != nil && self.images.count > 0) {
+            commentImgView.image = UIImage(named: self.images[0])
+            self.commentImgView.snp.updateConstraints { (make) in
+                make.height.equalTo((MainScreenWidth - 90) / 3)
+            }
+        } else {
+            commentImgView.snp.updateConstraints { (make) in
+                make.height.equalTo(0)
+            }
+        }
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.setupUIFrame()
+        updateCommentImgVConstant()
     }
     
     private func setupUIFrame() {
@@ -52,51 +66,18 @@ class CommentListCell: UITableViewCell {
             make.top.equalTo(userLogoImgView)
             make.height.equalTo(20.0)
         }
-        
-//        for imageV in imgArray {
-//            imageV.isHidden = true
-//        }
-                
-//        if (self.images != nil) {
-//            let width = (MainScreenWidth - 90) / 3
-//            for (idx, item) in self.images.enumerated() {
-//                print(idx)
-//                print(item)
-//                let imageView = self.imgArray[idx]
-//                imageView.image = UIImage(named: "channel4")
-////                imageView.isHidden = false
-//                self.contentView.addSubview(imageView)
-//
-//                imageView.snp.makeConstraints { (make) in
-//                    make.left.equalTo(commentTitle)
-//                    make.top.equalTo(commentTitle.snp_bottom).offset(10)
-//                    make.size.equalTo(width)
-//                }
-//            }
-//        }
-                
-//        cmtImgView.isHidden = true
-//        if (self.images != nil && self.images.count > 0) {
-            cmtImgView.image = UIImage(named: "channel4")
-            cmtImgView.snp.makeConstraints { (make) in
-                make.left.equalTo(commentTitle.snp_left)
-                make.top.equalTo(commentTitle.snp_bottom).offset(10.0)
-                make.size.equalTo((MainScreenWidth - 90) / 3)
-            }
-            cmtImgView.isHidden = false
-            commentDes.snp.makeConstraints { (make) in
-                make.left.equalTo(commentTitle.snp_left)
-                make.top.equalTo(cmtImgView.snp_bottom).offset(10.0)
-                make.width.equalTo(commentTitle)
-            }
-//        } else {
-//            commentDes.snp.makeConstraints { (make) in
-//                make.left.equalTo(commentTitle.snp_left)
-//                make.top.equalTo(commentTitle.snp_bottom).offset(5.0)
-//                make.width.equalTo(commentTitle)
-//            }
-//        }
-        
+
+        commentImgView.snp.makeConstraints { (make) in
+            make.left.equalTo(commentTitle.snp_left)
+            make.top.equalTo(commentTitle.snp_bottom).offset(10.0)
+            make.size.equalTo((MainScreenWidth - 90) / 3)
+        }
+
+        commentDes.snp.makeConstraints { (make) in
+            make.left.equalTo(commentTitle.snp_left)
+            make.top.equalTo(commentImgView.snp_bottom).offset(10.0)
+            make.width.equalTo(commentTitle)
+        }
         
         timeLabel.snp.makeConstraints { (make) in
             make.right.equalToSuperview().offset(-10)
@@ -126,9 +107,9 @@ class CommentListCell: UITableViewCell {
         commentTitle.textColor = kAppDarkGrayColor
         self.contentView.addSubview(commentTitle)
         
-        cmtImgView = UIImageView.init()
-        cmtImgView!.backgroundColor = UIColor.white
-        self.contentView.addSubview(cmtImgView!)
+        commentImgView = UIImageView.init()
+        commentImgView!.backgroundColor = UIColor.white
+        self.contentView.addSubview(commentImgView!)
         
         commentDes = UILabel.init()
         commentDes.font = UIFont.systemFont(ofSize: 13)
@@ -146,15 +127,4 @@ class CommentListCell: UITableViewCell {
         botLine.backgroundColor = kAppLineGrayColor
         self.contentView.addSubview(botLine)
     }
-    
-    lazy var imgArray: Array<UIImageView> = {
-        var arr:Array<UIImageView> = Array()
-        for index in 0...2 {
-            let imageV = UIImageView()
-            self.contentView.addSubview(imageV)
-            imageV.isHidden = true
-            arr.append(imageV)
-        }
-        return arr
-    }()
 }

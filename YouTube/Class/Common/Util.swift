@@ -109,3 +109,20 @@ extension String {
         return ceil(rect.height)
     }
 }
+
+var imgArray: Array<UIImageView> = {
+    var arr:Array<UIImageView> = Array()
+    for index in 0...2 {
+        let imageV = UIImageView()
+        imageV.isHidden = true
+        arr.append(imageV)
+    }
+    return arr
+}()
+
+func enumerateItemsInArray(array: Array<Any>) {
+    for (idx, item) in array.enumerated() {
+        print(idx)
+        print(item)
+    }
+}

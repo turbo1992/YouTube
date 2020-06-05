@@ -19,7 +19,7 @@ struct ArticleDataModel: HandyJSON {
     var total: Int?
     var marker: String?
     var isLast: Bool?
-    var list: [ArticleInfo]?
+    var list: Array<ArticleInfo>?
 }
 
 struct ArticleInfo: HandyJSON {

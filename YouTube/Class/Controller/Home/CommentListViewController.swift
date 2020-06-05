@@ -30,13 +30,13 @@ class CommentListViewController: BaseViewController {
                        "I can make it through the rain. I can stand up once again on my own."
     ]
     
-    var imagesArr = [["channel1", "channel2"],
+    var imagesArr = [["channel3", "channel2"],
                   [],
-                  ["channel1", "channel2", "channel3"],
+                  ["channel5", "channel2", "channel3"],
                   [],
                   [],
                   [],
-                  ["channel1", "channel2", "channel3"],
+                  ["channel2", "channel2", "channel3"],
                   []
     ]
 

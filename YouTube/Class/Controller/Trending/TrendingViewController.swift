@@ -17,20 +17,18 @@ class TrendingViewController: BaseViewController, TrendingBackDelegate {
     let menuTitles = ["hqdefault", "hqdefault-6", "What Does Jared Kushner Believe?", "hqdefault-6", "hqdefault-1", "Cnn:the age channage"]
     
     var detail: TrendingDetailViewController!
-    var articleList: [ArticleInfo]!
+    var articleList: Array<ArticleInfo>!
     var tableview : UITableView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.articleList = [ArticleInfo]()
-        setupUI()
+        self.articleList = Array()
+        createUI()
+        getArticleList()
     }
     
-    private func setupUI(){
+    private func createUI(){
         setupTableView()
-        getArticleList()
-        getArticleList()
     }
     
     @objc func refreshData() {
@@ -43,7 +41,7 @@ class TrendingViewController: BaseViewController, TrendingBackDelegate {
             print(json)
             let articleModel = JSONDeserializer<ArticleModel>.deserializeFrom(json: json.description)
             if (articleModel?.code == Retcode.SUCCESS.rawValue) {
-                for item in [ArticleInfo]((articleModel?.data?.list)!) {
+                for item in Array<ArticleInfo>((articleModel?.data?.list)!) {
                     self.articleList.append(item)
                 }
             } else {
@@ -53,11 +51,6 @@ class TrendingViewController: BaseViewController, TrendingBackDelegate {
         }) { (errorCode, message) in
             print(errorCode as Any, message)
         }
-    }
-    
-    func reloadTable() {
-        self.tableview!.mj_header!.endRefreshing()
-        self.tableview!.reloadData()
     }
     
     private func setupTableView() {
@@ -80,6 +73,10 @@ class TrendingViewController: BaseViewController, TrendingBackDelegate {
         self.tableview!.mj_header = header
     }
     
+    func reloadTable() {
+        self.tableview!.mj_header!.endRefreshing()
+        self.tableview!.reloadData()
+    }
 }
 
 extension TrendingViewController: UITableViewDelegate, UITableViewDataSource {
