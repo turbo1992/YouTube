@@ -25,7 +25,7 @@ class VedioDetailController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Vedio Detail"
+        self.title = "Vedio"
         self.setLeftImageNamed(name: "back", action: #selector(popBackController))
         self.setRightImageNamed(name: "more", action: #selector(pushCommentList))
         setupUI()

@@ -30,6 +30,8 @@ class RecomandVedioCell: UITableViewCell {
     private func createCellUI() {
         vedioImageView = UIImageView.init()
         vedioImageView!.backgroundColor = UIColor.white
+        vedioImageView.layer.cornerRadius = 3
+        vedioImageView.layer.masksToBounds = true
         self.contentView.addSubview(vedioImageView!)
         
         titleLabel = UILabel.init()

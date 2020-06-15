@@ -30,8 +30,8 @@ class VedioCell: UITableViewCell {
     
     func setArticle(article: ArticleInfo) {
         let imageUrl = fileService + article.image_url!
-        UtilImage(imageView: vedioImageView, url: imageUrl, placeholder: "placeholder")
-        UtilImage(imageView: logoImageView, url: imageUrl, placeholder: "placeholder")
+        UtilImage(imageView: vedioImageView, url: imageUrl, placeholder: "Cnn:the age channage")
+        UtilImage(imageView: logoImageView, url: imageUrl, placeholder: "Cnn:the age channage")
         titleLabel.text = article.title
         descriptionLabel.text = TimeFormat(value: article.create_time)
         timeLabel.text = "01:02"
