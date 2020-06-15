@@ -60,6 +60,6 @@ extension TrendingLineViewModel {
         let picHeight = num * OnePicHeight
         let line_des = String(self.lineList[indexPath.row].line_des!)
         let desHeight = GetHeightForText(text: line_des, fontSize: 13, width: MainScreenWidth-30)
-        return 80 + picHeight + desHeight + 30
+        return 80 + picHeight + desHeight + 10
     }
 }

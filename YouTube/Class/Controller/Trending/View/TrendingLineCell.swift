@@ -13,7 +13,6 @@ class TrendingLineCell: UITableViewCell {
     var userLogoImgView: UIImageView!
     var userNameLabel: UILabel!
     var createLabel: UILabel!
-    var collectionView: UICollectionView!
     var lineDesLabel: UILabel!
     var botLine: UIView!
 
@@ -27,7 +26,6 @@ class TrendingLineCell: UITableViewCell {
         self.contentView.layer.masksToBounds = true
         
         createCellUI()
-        setupUIFrame()
     }
     
     func createCellUI() {
@@ -47,14 +45,6 @@ class TrendingLineCell: UITableViewCell {
         createLabel.textColor = UIColor.gray
         self.contentView.addSubview(createLabel)
         
-        let layout = UICollectionViewFlowLayout.init()
-        collectionView = UICollectionView.init(frame:.zero, collectionViewLayout: layout)
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.backgroundColor = UIColor.white
-        collectionView.showsVerticalScrollIndicator = false
-        collectionView.showsHorizontalScrollIndicator = false
-        collectionView.register(TrendingLinePicCell.self, forCellWithReuseIdentifier:"TrendingLinePicCell")
         self.contentView.addSubview(collectionView)
         
         lineDesLabel = UILabel.init()
@@ -66,37 +56,7 @@ class TrendingLineCell: UITableViewCell {
         botLine = UIView.init()
         botLine.backgroundColor = kAppLineGrayColor
         self.contentView.addSubview(botLine)
-    }
-    
-    var lineData:TrendingLineData? {
-        didSet {
-            guard lineData != nil else {return}
-            self.userLogoImgView.image = UIImage(named: (lineData?.logo_url)!)
-            self.userNameLabel.text = lineData?.user_name
-            self.createLabel.text = lineData?.time
-            
-            let picNum = lineData?.line_pics?.count ?? 0
-            var num:CGFloat = 0
-            if picNum > 0 && picNum <= 3 {
-                num = 1
-            } else if picNum > 3 && picNum <= 6 {
-                num = 2
-            } else if picNum > 6 {
-                num = 3
-            }
-            let OnePicHeight = CGFloat((MainScreenWidth-30)/3)
-            let picHeight = num * OnePicHeight
-            self.collectionView.snp.updateConstraints { (make) in
-                make.height.equalTo(picHeight + 20)
-            }
-            self.collectionView.reloadData()
-            
-            lineDesLabel.text = lineData?.line_des
-        }
-    }
-    
-    override func layoutSubviews() {
-        super.layoutSubviews()
+        
         setupUIFrame()
     }
     
@@ -125,7 +85,7 @@ class TrendingLineCell: UITableViewCell {
             make.left.equalToSuperview().offset(10)
             make.right.equalToSuperview().offset(-10)
             make.top.equalTo(userLogoImgView.snp.bottom).offset(10)
-            make.height.equalTo((MainScreenWidth - 30) + 20)
+            make.height.equalTo((MainScreenWidth - 30) / 3 + 20)
         }
         
         lineDesLabel.snp.makeConstraints { (make) in
@@ -141,6 +101,46 @@ class TrendingLineCell: UITableViewCell {
             make.bottom.equalTo(0)
         }
     }
+    
+    var lineData:TrendingLineData? {
+        didSet {
+            guard lineData != nil else {return}
+            self.userLogoImgView.image = UIImage(named: (lineData?.logo_url)!)
+            self.userNameLabel.text = lineData?.user_name
+            self.createLabel.text = lineData?.time
+            
+            let picNum = lineData?.line_pics?.count ?? 0
+            var num:CGFloat = 0
+            if picNum > 0 && picNum <= 3 {
+                num = 1
+            } else if picNum > 3 && picNum <= 6 {
+                num = 2
+            } else if picNum > 6 {
+                num = 3
+            }
+            let OnePicHeight = CGFloat((MainScreenWidth-30)/3)
+            let picHeight = num * OnePicHeight
+            self.collectionView.snp.updateConstraints { (make) in
+                make.height.equalTo(picHeight)
+            }
+            self.collectionView.reloadData()
+            
+            lineDesLabel.text = lineData?.line_des
+        }
+    }
+    
+    lazy var collectionView : UICollectionView = {
+        let layout = UICollectionViewFlowLayout.init()
+        let collectionView = UICollectionView.init(frame:.zero, collectionViewLayout: layout)
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.backgroundColor = UIColor.white
+        collectionView.showsVerticalScrollIndicator = false
+        collectionView.showsHorizontalScrollIndicator = false
+        collectionView.register(TrendingLinePicCell.self, forCellWithReuseIdentifier:"TrendingLinePicCell")
+        
+        return collectionView
+    }()
 }
 
 extension TrendingLineCell: UICollectionViewDelegate, UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {

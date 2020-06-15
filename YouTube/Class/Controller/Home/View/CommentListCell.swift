@@ -12,7 +12,6 @@ class CommentListCell: UITableViewCell {
     
     var userLogoImgView: UIImageView!
     var commentTitle: UILabel!
-    var commentImgView: UIImageView!
     var commentDes: UILabel!
     var timeLabel: UILabel!
     var botLine: UIView!
@@ -21,13 +20,18 @@ class CommentListCell: UITableViewCell {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
+     
+    lazy var commentImgView : UIImageView = {
+        let commentImgView = UIImageView.init()
+        commentImgView.backgroundColor = UIColor.white
+        return commentImgView
+    }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.selectionStyle = UITableViewCell.SelectionStyle.none
         
         createCellUI()
-        setupUIFrame()
     }
     
     func setImageViews(images: Array<String>) {
@@ -42,17 +46,45 @@ class CommentListCell: UITableViewCell {
                 make.height.equalTo((MainScreenWidth - 90) / 3)
             }
         } else {
-            commentImgView.snp.updateConstraints { (make) in
+            self.commentImgView.snp.updateConstraints { (make) in
                 make.height.equalTo(0)
             }
         }
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        updateCommentImgVConstant()
+    private func createCellUI() {
+        userLogoImgView = UIImageView.init()
+        userLogoImgView!.backgroundColor = UIColor.white
+        userLogoImgView.layer.cornerRadius = 20
+        userLogoImgView.layer.masksToBounds = true
+        self.contentView.addSubview(userLogoImgView!)
+        
+        commentTitle = UILabel.init()
+        commentTitle.font = UIFont.systemFont(ofSize: 15)
+        commentTitle.textColor = kAppDarkGrayColor
+        self.contentView.addSubview(commentTitle)
+        
+        self.contentView.addSubview(commentImgView)
+        
+        commentDes = UILabel.init()
+        commentDes.font = UIFont.systemFont(ofSize: 13)
+        commentDes.textColor = UIColor.gray
+        commentDes.numberOfLines = 0
+        self.contentView.addSubview(commentDes)
+        
+        timeLabel = UILabel.init()
+        timeLabel.font = UIFont.systemFont(ofSize: 12)
+        timeLabel.textColor = kAppDarkGrayColor
+        timeLabel.textAlignment = .right
+        self.contentView.addSubview(timeLabel)
+        
+        botLine = UIView.init()
+        botLine.backgroundColor = kAppLineGrayColor
+        self.contentView.addSubview(botLine)
+        
+        setupUIFrame()
     }
-    
+        
     private func setupUIFrame() {
         userLogoImgView.snp.makeConstraints { (make) in
             make.top.equalToSuperview().offset(10.0)
@@ -70,7 +102,8 @@ class CommentListCell: UITableViewCell {
         commentImgView.snp.makeConstraints { (make) in
             make.left.equalTo(commentTitle.snp_left)
             make.top.equalTo(commentTitle.snp_bottom).offset(10.0)
-            make.size.equalTo((MainScreenWidth - 90) / 3)
+            make.width.equalTo((MainScreenWidth - 90) / 3)
+            make.height.equalTo((MainScreenWidth - 90) / 3)
         }
 
         commentDes.snp.makeConstraints { (make) in
@@ -93,38 +126,5 @@ class CommentListCell: UITableViewCell {
             make.top.equalTo(timeLabel.snp.bottom).offset(12)
             make.bottom.equalTo(0)
         }
-    }
-    
-    private func createCellUI() {
-        userLogoImgView = UIImageView.init()
-        userLogoImgView!.backgroundColor = UIColor.white
-        userLogoImgView.layer.cornerRadius = 20
-        userLogoImgView.layer.masksToBounds = true
-        self.contentView.addSubview(userLogoImgView!)
-        
-        commentTitle = UILabel.init()
-        commentTitle.font = UIFont.systemFont(ofSize: 15)
-        commentTitle.textColor = kAppDarkGrayColor
-        self.contentView.addSubview(commentTitle)
-        
-        commentImgView = UIImageView.init()
-        commentImgView!.backgroundColor = UIColor.white
-        self.contentView.addSubview(commentImgView!)
-        
-        commentDes = UILabel.init()
-        commentDes.font = UIFont.systemFont(ofSize: 13)
-        commentDes.textColor = UIColor.gray
-        commentDes.numberOfLines = 0
-        self.contentView.addSubview(commentDes)
-        
-        timeLabel = UILabel.init()
-        timeLabel.font = UIFont.systemFont(ofSize: 12)
-        timeLabel.textColor = kAppDarkGrayColor
-        timeLabel.textAlignment = .right
-        self.contentView.addSubview(timeLabel)
-        
-        botLine = UIView.init()
-        botLine.backgroundColor = kAppLineGrayColor
-        self.contentView.addSubview(botLine)
     }
 }
