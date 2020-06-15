@@ -22,20 +22,20 @@ class TabBarController: ESTabBarController {
         let v3 = SubscriptionsViewController()
         let v4 = AccountViewController()
         
-        v1.title = "YouTube"
-        v2.title = "Trending"
-        v3.title = "Subscriptions"
-        v4.title = "Account"
+        v1.title = ""
+        v2.title = ""
+        v3.title = ""
+        v4.title = ""
         
         let nav1 = BaseNavigationController(rootViewController: v1)
         let nav2 = BaseNavigationController(rootViewController: v2)
         let nav3 = BaseNavigationController(rootViewController: v3)
         let nav4 = BaseNavigationController(rootViewController: v4)
         
-        nav1.tabBarItem = ESTabBarItem.init(BouncesContentView(), title: nil, image: UIImage(named: "es-home"), selectedImage: UIImage(named: "es-home-1"))
-        nav2.tabBarItem = ESTabBarItem.init(BouncesContentView(), title: nil, image: UIImage(named: "es-find"), selectedImage: UIImage(named: "es-find-1"))
-        nav3.tabBarItem = ESTabBarItem.init(BouncesContentView(), title: nil, image: UIImage(named: "es-cardboard"), selectedImage: UIImage(named: "es-cardboard-1"))
-        nav4.tabBarItem = ESTabBarItem.init(BouncesContentView(), title: nil, image: UIImage(named: "es-me"), selectedImage: UIImage(named: "es-me-1"))
+        nav1.tabBarItem = ESTabBarItem.init(BouncesContentView(), title: "首页", image: UIImage(named: "tabbar-1"), selectedImage: UIImage(named: "tabbar-1"))
+        nav2.tabBarItem = ESTabBarItem.init(BouncesContentView(), title: "时下流行", image: UIImage(named: "tabbar-2"), selectedImage: UIImage(named: "tabbar-2"))
+        nav3.tabBarItem = ESTabBarItem.init(BouncesContentView(), title: "媒体库", image: UIImage(named: "tabbar-3"), selectedImage: UIImage(named: "tabbar-3"))
+        nav4.tabBarItem = ESTabBarItem.init(BouncesContentView(), title: "我的", image: UIImage(named: "tabbar-4"), selectedImage: UIImage(named: "tabbar-4"))
         
         self.tabBar.shadowImage = nil
 

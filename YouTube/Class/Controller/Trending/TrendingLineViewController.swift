@@ -21,9 +21,14 @@ class TrendingLineViewController: BaseViewController {
 
         self.title = "Trending Line"
         self.setLeftImageNamed(name: "back", action: #selector(popBackController))
-        
+        self.setRightImageNamed(name: "more", action: #selector(pushCommentList))
+
         setupUI()
         loadData()
+    }
+    
+    @objc func pushCommentList() {
+        
     }
     
     private func setupUI(){

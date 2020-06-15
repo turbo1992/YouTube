@@ -20,6 +20,7 @@ class BaseViewController: UIViewController {
     func setLeftImageNamed(name: String, action: Selector) {
         let image = UIImage(named: name)
         let leftItem = UIBarButtonItem.init(image: image, style: UIBarButtonItem.Style.plain, target: self, action: action)
+        leftItem.tintColor = kAppDarkTextColor
         self.navigationItem.leftBarButtonItem = leftItem
         
         // 自定义返回按钮恢复返回手势
@@ -31,6 +32,7 @@ class BaseViewController: UIViewController {
     func setRightImageNamed(name: String, action: Selector) {
         let image = UIImage(named: name)
         let rightItem = UIBarButtonItem.init(image: image, style: UIBarButtonItem.Style.plain, target: self, action: action)
+        rightItem.tintColor = kAppDarkTextColor
         self.navigationItem.rightBarButtonItem = rightItem
     }
     

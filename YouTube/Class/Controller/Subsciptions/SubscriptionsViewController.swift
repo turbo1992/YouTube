@@ -23,8 +23,43 @@ class SubscriptionsViewController: BaseViewController {
     }
     
     private func createUI(){
-        self.setRightImageNamed(name: "more", action: #selector(pushTrendingLine))
+        setupNavUI()
         setupTableView()
+    }
+    
+    private func setupNavUI(){
+        let leftItem = UIBarButtonItem()
+        let leftBtn = UIButton()
+        leftBtn.frame = CGRect(x: 0, y: 0, width: 28, height: 28)
+        leftBtn.setImage(UIImage(named: "youtube"), for: UIControl.State.normal)
+        leftBtn.setImage(UIImage(named: "youtube"), for: UIControl.State.highlighted)
+        leftBtn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        leftBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
+        leftBtn.layer.cornerRadius = 4
+        leftBtn.layer.masksToBounds = true
+        leftItem.customView = leftBtn
+        self.navigationItem.leftBarButtonItem = leftItem
+        
+        
+        let image1 = UIImage(named: "photo")
+        let rightItem1 = UIBarButtonItem.init(image: image1, style: UIBarButtonItem.Style.plain, target: self, action: #selector(settingAction))
+        rightItem1.tintColor = kAppDarkTextColor
+        
+        let image2 = UIImage(named: "fangdajing")
+        let rightItem2 = UIBarButtonItem.init(image: image2, style: UIBarButtonItem.Style.plain, target: self, action: #selector(settingAction))
+        rightItem2.tintColor = kAppDarkTextColor
+        
+        let image3 = UIImage(named: "dian")
+        let rightItem3 = UIBarButtonItem.init(image: image3, style: UIBarButtonItem.Style.plain, target: self, action: #selector(settingAction))
+        rightItem3.tintColor = kAppDarkTextColor
+        
+        self.navigationItem.rightBarButtonItems = [rightItem3, rightItem2, rightItem1]
+    }
+    
+    @objc func settingAction() {
+        let trendingLine = TrendingLineViewController()
+        trendingLine.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(trendingLine, animated: true)
     }
     
     @objc func pushTrendingLine() {

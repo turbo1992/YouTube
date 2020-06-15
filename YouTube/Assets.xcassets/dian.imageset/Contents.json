@@ -1,11 +1,12 @@
 {
   "images" : [
     {
+      "filename" : "点.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "account.png",
+      "filename" : "点-1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
