@@ -78,7 +78,7 @@ class AccountHeaderView: UIView {
     lazy var userNameLabel: UILabel = {
         let userNameLabel = UILabel()
         userNameLabel.textColor = UIColor.white
-        userNameLabel.font = UIFont.systemFont(ofSize: 14)
+        userNameLabel.font = UIFont.boldSystemFont(ofSize: 15)
         userNameLabel.text = "Haki Lortiry"
         return userNameLabel
     }()

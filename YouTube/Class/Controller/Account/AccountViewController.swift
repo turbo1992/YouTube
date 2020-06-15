@@ -104,7 +104,9 @@ extension AccountViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.change()
+        let commentList = CommentListViewController()
+        commentList.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(commentList, animated: true)
     }
 }
 

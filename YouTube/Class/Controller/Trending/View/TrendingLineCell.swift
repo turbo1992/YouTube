@@ -36,7 +36,7 @@ class TrendingLineCell: UITableViewCell {
         self.contentView.addSubview(userLogoImgView!)
         
         userNameLabel = UILabel.init()
-        userNameLabel.font = UIFont.systemFont(ofSize: 15)
+        userNameLabel.font = UIFont.boldSystemFont(ofSize: 14)
         userNameLabel.textColor = kAppDarkGrayColor
         self.contentView.addSubview(userNameLabel)
         

@@ -39,7 +39,7 @@ class VedioDetailHeaderView: UIView {
         addSubview(vedioImageView)
         
         titleLabel = UILabel()
-        titleLabel.font = UIFont.systemFont(ofSize: 15)
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 15)
         titleLabel.textColor = kAppTextColor
         addSubview(titleLabel)
         
@@ -95,7 +95,7 @@ class VedioDetailHeaderView: UIView {
         addSubview(logoImageView!)
         
         userNameLabel = UILabel.init()
-        userNameLabel.font = UIFont.systemFont(ofSize: 15)
+        userNameLabel.font = UIFont.boldSystemFont(ofSize: 14.5)
         userNameLabel.textColor = kAppDarkGrayColor
         addSubview(userNameLabel)
         

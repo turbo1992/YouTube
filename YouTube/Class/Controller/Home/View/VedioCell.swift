@@ -97,7 +97,7 @@ class VedioCell: UITableViewCell {
         self.contentView.addSubview(logoImageView!)
         
         titleLabel = UILabel.init()
-        titleLabel.font = UIFont.systemFont(ofSize: 15)
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 15)
         titleLabel.textColor = kAppDarkGrayColor
         self.contentView.addSubview(titleLabel)
         

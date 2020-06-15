@@ -60,7 +60,7 @@ class CommentListCell: UITableViewCell {
         self.contentView.addSubview(userLogoImgView!)
         
         commentTitle = UILabel.init()
-        commentTitle.font = UIFont.systemFont(ofSize: 15)
+        commentTitle.font = UIFont.boldSystemFont(ofSize: 15)
         commentTitle.textColor = kAppDarkGrayColor
         self.contentView.addSubview(commentTitle)
         

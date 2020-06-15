@@ -39,8 +39,9 @@ class VedioDetailController: BaseViewController {
     }
     
     @objc func pushCommentList() {
-        let commentList = CommentListViewController()
-        self.navigationController?.pushViewController(commentList, animated: true)
+        let trendingLine = TrendingLineViewController()
+        trendingLine.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(trendingLine, animated: true)
     }
     
     private func setupUI(){
@@ -102,7 +103,7 @@ extension VedioDetailController: UITableViewDelegate, UITableViewDataSource {
         
         let textL = UILabel(frame: CGRect(x: 15, y: 10, width: 100, height: 20))
         textL.text = "Up Next"
-        textL.font = UIFont.systemFont(ofSize: 14)
+        textL.font = UIFont.boldSystemFont(ofSize: 14)
         textL.textColor = kAppTextColor
         sectionHeader .addSubview(textL)
         
@@ -133,7 +134,8 @@ extension VedioDetailController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let commentList = CommentListViewController()
-        self.navigationController?.pushViewController(commentList, animated: true)
+        let trendingLine = TrendingLineViewController()
+        trendingLine.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(trendingLine, animated: true)
     }
 }

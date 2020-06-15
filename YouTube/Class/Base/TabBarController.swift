@@ -22,7 +22,7 @@ class TabBarController: ESTabBarController {
         let v3 = SubscriptionsViewController()
         let v4 = AccountViewController()
         
-        v1.title = "Home"
+        v1.title = "YouTube"
         v2.title = "Trending"
         v3.title = "Subscriptions"
         v4.title = "Account"

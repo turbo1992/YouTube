@@ -23,7 +23,14 @@ class SubscriptionsViewController: BaseViewController {
     }
     
     private func createUI(){
+        self.setRightImageNamed(name: "more", action: #selector(pushTrendingLine))
         setupTableView()
+    }
+    
+    @objc func pushTrendingLine() {
+        let trendingLine = TrendingLineViewController()
+        trendingLine.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(trendingLine, animated: true)
     }
     
     private func setupTableView(){

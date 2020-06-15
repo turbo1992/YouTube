@@ -23,7 +23,25 @@ class HomeViewController: BaseViewController {
     }
     
     private func setupUI(){
+        let leftItem = UIBarButtonItem()
+        let leftBtn = UIButton()
+        leftBtn.frame = CGRect(x: 0, y: 0, width: 28, height: 28)
+        leftBtn.setImage(UIImage(named: "AppIcon"), for: UIControl.State.normal)
+        leftBtn.setImage(UIImage(named: "AppIcon"), for: UIControl.State.highlighted)
+        leftBtn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
+        leftBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
+        leftBtn.addTarget(self, action: #selector(settingAction), for: UIControl.Event.touchUpInside)
+        leftItem.customView = leftBtn
+        self.navigationItem.leftBarButtonItem = leftItem
+        self.setRightImageNamed(name: "more", action: #selector(settingAction))
+
         setupTableView()
+    }
+    
+    @objc func settingAction() {
+        let trendingLine = TrendingLineViewController()
+        trendingLine.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(trendingLine, animated: true)
     }
     
     private func setupTableView() {
