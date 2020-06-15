@@ -137,6 +137,7 @@ class TrendingLineCell: UITableViewCell {
         collectionView.backgroundColor = UIColor.white
         collectionView.showsVerticalScrollIndicator = false
         collectionView.showsHorizontalScrollIndicator = false
+        collectionView.isScrollEnabled = false
         collectionView.register(TrendingLinePicCell.self, forCellWithReuseIdentifier:"TrendingLinePicCell")
         
         return collectionView
