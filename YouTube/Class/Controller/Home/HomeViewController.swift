@@ -30,6 +30,8 @@ class HomeViewController: BaseViewController {
         leftBtn.setImage(UIImage(named: "AppIcon"), for: UIControl.State.highlighted)
         leftBtn.titleLabel?.font = UIFont.boldSystemFont(ofSize: 16)
         leftBtn.setTitleColor(UIColor.white, for: UIControl.State.normal)
+        leftBtn.layer.cornerRadius = 4
+        leftBtn.layer.masksToBounds = true
         leftBtn.addTarget(self, action: #selector(settingAction), for: UIControl.Event.touchUpInside)
         leftItem.customView = leftBtn
         self.navigationItem.leftBarButtonItem = leftItem
